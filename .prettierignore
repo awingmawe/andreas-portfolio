@@ -1,0 +1,9 @@
+.idea
+.next
+.vscode
+.yarn
+node_modules
+oldSrc
+public
+yarn.lock
+src/assets/**/*.json
