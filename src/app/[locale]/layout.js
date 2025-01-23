@@ -1,6 +1,16 @@
 import Navbar from '@/components/Navbar'
 
-export default function RootLayout({ children, params: { locale } }) {
+export default async function RootLayout(props) {
+  const params = await props.params;
+
+  const {
+    locale
+  } = params;
+
+  const {
+    children
+  } = props;
+
   return (
     <html lang={locale} translate='no'>
       <body>

@@ -22,5 +22,26 @@
       "title": "My Professional Passion:",
       "text": "As a seasoned professional, I am driven by a passion for coaching, mentoring, and teaching. I am dedicated to empowering individuals and organizations, helping them realize their goals and unlock their full potential. With a diverse skill set, a deep understanding of the financial industry, and a commitment to continuous growth and learning, I am excited to collaborate with motivated individuals and contribute to their success."
     }
+  },
+  "services": {
+    "title": "Services",
+    "wealth-planning": {
+      "title": "Wealth Planning and Financial Coaching",
+      "sub-title": "Personalized wealth planning and financial coaching services.",
+      "desc": "I can help you to assess your financial goals, develop customized wealth management strategies, and provide guidance on investments, retirement planning, insurance, and risk management. You will get empower to make informed financial decisions and achieve your long-term financial objectives."
+    },
+    "lectures": {
+      "title": "Lectures and Workshops on Finance and Business",
+      "desc": "Lectures and workshops in educational institutions or corporate settings. Thanks to my expertise in accounting, finance, global banking, and business innovation I will deliver well-suited engaging and insightful sessions. Whether it’s teaching undergraduate or graduate students or providing professional development training to corporate professionals, I will share my knowledge, insights, and practical examples to enhance financial literacy and business acumen."
+    },
+    "leadership": {
+      "title": "Leadership and Career Mentoring",
+      "desc": "With my experience as a board member, management director, and head of departments, I will guide aspiring professionals and emerging leaders in developing their leadership skills, strategic thinking, and decision-making abilities. Through one-on-one mentoring sessions, you will get career guidance, help to navigate challenges, and assistance in setting achievable goals for personal and professional growth"
+    },
+    "mentoring": {
+      "title": "Mentoring for Students",
+      "desc": "Mentorship programs specifically tailored to students pursuing education or careers in the business sector. Through mentorship, you will get guidance, support, and practical advice to help you navigate your educational journey or early career stages. Whether it’s assisting students in selecting the right academic programs, offering insights on internships and job opportunities, or providing guidance on developing essential skills and networking, my mentoring services can empower you to make informed decisions, set meaningful goals, and succeed in your chosen paths. By sharing my own experiences, knowledge, and industry connections, You will get inspire and foster your personal and professional development."
+    },
+    "contact": "Contact Now"
   }
 }
