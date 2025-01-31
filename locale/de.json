@@ -1,26 +1,77 @@
 {
+  "navbar": {
+    "home": "Startseite",
+    "about": "Über uns",
+    "services": "Dienstleistungen",
+    "publications": "Publikationen",
+    "cv": "Lebenslauf",
+    "contact": "Kontakt"
+  },
+  "footer": {
+    "copyright": "2025 © Alle Rechte vorbehalten von Vision Goal LLC",
+    "information": "Offizielle Informationen"
+  },
   "about-us": {
     "title": "Über uns",
-    "header": "Finanzielle Schulung und Ausbildung - Mentoring und Coaching",
-    "text-1": "Hallo, ich bin Andreas Svoboda, ein leidenschaftlicher Profi mit einem starken Fokus auf Coaching, Mentoring und Unterrichten. Mit einem vielfältigen Hintergrund und umfassender Erfahrung in der Finanzbranche habe ich meine Karriere der Aufgabe gewidmet, Einzelpersonen und Organisationen dabei zu unterstützen, ihr volles Potenzial auszuschöpfen. Mit diesem Ziel vor Augen habe ich 2022 Vision Goal LLC gegründet.",
-    "text-2": "Unterrichten und Mentoring sind zu meiner wahren Leidenschaft geworden. Als Professor an den United International Business Schools (UIBS) in Zürich und Genf halte ich Vorlesungen zu Themen wie Buchhaltung, Finanzen und Global Banking und bilde so die Denkweise von Bachelor- und Masterstudenten. Darüber hinaus bin ich Abteilungsleiter für Finanzen und Führung, Banken und Finanzen an der Fernfachhochschule Schweiz (FFHS), wo ich angehende Fachkräfte bei ihrer akademischen und beruflichen Entwicklung begleite.",
-    "text-3": "Zusätzlich zu diesen Rollen hatte ich das Privileg, an der HSO in Zürich, Rapperswil und Baar zu unterrichten, mit besonderem Schwerpunkt auf dem EMBA-Programm. An der HSO habe ich zur Ausbildung und Entwicklung erfahrener Fachkräfte beigetragen, die einen höheren Abschluss anstrebten.",
-    "professional-career": {
-      "title": "Beruflicher Werdegang:",
-      "text": "Im Laufe meiner Karriere habe ich in verschiedenen Führungspositionen gearbeitet und dabei wertvolle Erkenntnisse und Fachwissen gewonnen. Ich habe Positionen bei namhaften Unternehmen innegehabt, darunter die Bank Julius Bär & Co. AG in der Schweiz und in Singapur, wo ich derzeit als Head of Wealth Planning (WP) Life & Pension tätig bin. Ich habe auch bedeutende Beiträge beim Liechtensteinischen Versicherungsverband geleistet, wo ich als Vorstandsmitglied tätig war und mich auf Kommunikation, Marketing, Öffentlichkeitsarbeit, Strategiearbeit, Interessenvertretung und Finanzplanung konzentrierte. Darüber hinaus war ich als Management Director und Head of Finance bei der Wealth Assurance AG tätig, wo ich das Versicherungsunternehmen leitete und die strategische Ausrichtung, das Risikomanagement und wichtige operative Funktionen beaufsichtigte."
+    "header": "Finanztraining und Bildung - Mentoring und Coaching",
+    "intro": "Hallo, ich bin Andreas Svoboda, Gründer von Vision Goal LLC (gegründet 2022). Mit umfassender Erfahrung in der Finanzbranche konzentriere ich mich auf Coaching, Mentoring und Lehre, um Einzelpersonen und Organisationen zu stärken.",
+    "teaching": "Ich unterrichte an der UIBS in Zürich und Genf in den Bereichen Rechnungswesen, Finanzen und globales Banking und leite Finanzprogramme an der FFHS. Zudem trage ich zum EMBA-Programm der HSO bei und unterstütze Fachleute in ihrer beruflichen Weiterentwicklung.",
+    "career": {
+      "title": "Berufliche Laufbahn",
+      "text": "Ich habe Führungspositionen bei der Bank Julius Bär & Co. AG, dem Liechtensteinischen Versicherungsverband und Wealth Assurance AG innegehabt und Fachwissen in Vermögensplanung, Strategie und Risikomanagement erworben."
     },
-    "teaching-experience-1": {
-      "title": "Ausbildung und Lehrerfahrung:",
-      "text-1": "My dedication to continuous learning and professional development is reflected in my academic journey. I hold a LL.M. UZH International Business Law from the University of Zurich, a Master of Science Professional Accountancy from the University of London, and a Doctor of Business Administration from the University of Liverpool. In addition to my academic achievements, I have obtained a Master of Business Administration from the University of Southern Queensland and a Betriebsökonom HWV from the Hochschule für Wirtschaft Zürich HWZ.",
-      "text-2": "Als Finanzexperte, der zum Pädagogen wurde, bringe ich eine Fülle von Fachwissen und Praxiserfahrung in den Unterricht ein. Ich bin bestrebt, spannenden und wirkungsvollen Unterricht zu halten, der die Schüler dazu inspiriert, in ihrer Karriere erfolgreich zu sein und etwas in der Welt zu bewirken. Meine Lehrtätigkeit an der UIBS, FFHS und HSO ermöglicht es mir, die nächste Generation von Fachleuten zu formen und Wissen sowohl auf Bachelor- als auch auf Master-Ebene zu vermitteln."
+    "education": {
+      "title": "Bildung und Lehrerfahrung",
+      "text": "Ich habe Abschlüsse, darunter einen LL.M. in Internationalem Wirtschaftsrecht, einen MSc in Professional Accountancy und einen DBA. Meine Lehrtätigkeit erstreckt sich über mehrere Institutionen und Bildungsstufen und hilft, die nächste Generation von Fachkräften auszubilden."
     },
     "skills": {
-      "title": "Fähigkeiten und Fachwissen:",
-      "text": "Ich spreche fließend Deutsch und Englisch und verfüge über ausgeprägte Kommunikationsfähigkeiten, die es mir ermöglichen, effektiv mit unterschiedlichen Zielgruppen in Kontakt zu treten. Im Laufe meiner Karriere habe ich außergewöhnliche Führungsqualitäten, strategisches Denken und analytische Fähigkeiten bewiesen. Meine Expertise umfasst Bereiche wie Finanzplanung, Risikomanagement, Buchhaltung und Anlageverwaltung. Ich bin mit den Feinheiten der Finanzbranche bestens vertraut und verfüge über ein tiefes Verständnis von nachhaltiger Finanzierung, Kapitalmärkten und Portfoliomanagement."
+      "title": "Fähigkeiten und Fachwissen",
+      "text": "Fließend in Deutsch und Englisch, spezialisiere ich mich auf Finanzplanung, Risikomanagement, Rechnungswesen und Investitionen mit umfassendem Wissen über nachhaltige Finanzen und Kapitalmärkte."
     },
-    "professional-passion": {
-      "title": "Meine berufliche Leidenschaft:",
-      "text": "Als erfahrener Profi treibt mich eine Leidenschaft für Coaching, Mentoring und Unterrichten an. Ich widme mich der Befähigung von Einzelpersonen und Organisationen, helfe ihnen, ihre Ziele zu verwirklichen und ihr volles Potenzial zu entfalten. Mit einem vielfältigen Kompetenzspektrum, einem tiefen Verständnis der Finanzbranche und dem Engagement für kontinuierliches Wachstum und Lernen freue ich mich darauf, mit motivierten Menschen zusammenzuarbeiten und zu ihrem Erfolg beizutragen."
+    "passion": {
+      "title": "Meine berufliche Leidenschaft",
+      "text": "Ich bin leidenschaftlich daran interessiert, Menschen durch Coaching und Mentoring zu helfen, ihr volles Potenzial durch strategische Beratung und Bildung zu entfalten."
+    }
+  },
+  "services": {
+    "title": "Dienstleistungen",
+    "wealth-planning": {
+      "title": "Vermögensplanung und Finanzcoaching",
+      "desc": "Maßgeschneiderte Strategien für Investitionen, Ruhestand, Versicherungen und Risikomanagement, um langfristige finanzielle Ziele zu erreichen.",
+      "long-text": "Ich kann Ihnen helfen, Ihre finanziellen Ziele zu bewerten, maßgeschneiderte Vermögensverwaltungsstrategien zu entwickeln und Sie bei Investitionen, Altersvorsorge, Versicherungen und Risikomanagement zu beraten. Sie werden in die Lage versetzt, fundierte Finanzentscheidungen zu treffen und Ihre langfristigen Finanzziele zu erreichen."
+    },
+    "lectures": {
+      "title": "Vorträge und Workshops",
+      "desc": "Bildungsveranstaltungen zu Finanzen, Rechnungswesen und Unternehmensinnovation für Studierende und Fachkräfte.",
+      "long-text": "Vorträge und Workshops in Bildungseinrichtungen oder Unternehmen. Dank meiner Expertise in den Bereichen Buchhaltung, Finanzen, Global Banking und Geschäftsinnovation halte ich interessante und aufschlussreiche Vorträge. Ob ich Bachelor- oder Masterstudenten unterrichte oder Unternehmensfachleute in Weiterbildungskursen unterstütze, ich teile mein Wissen, meine Erkenntnisse und praktische Beispiele, um die Finanzkompetenz und den Geschäftssinn zu verbessern."
+    },
+    "leadership": {
+      "title": "Führung und Karriere-Mentoring",
+      "desc": "Beratung für aufstrebende Fachkräfte zur Entwicklung von Führungskompetenzen, strategischem Denken und Karriereplanung.",
+      "long-text": "Mit meiner Erfahrung als Vorstandsmitglied, Geschäftsführer und Abteilungsleiter unterstütze ich aufstrebende Fachkräfte und aufstrebende Führungskräfte bei der Entwicklung ihrer Führungsqualitäten, ihres strategischen Denkens und ihrer Entscheidungskompetenz. In Einzel-Mentoring-Sitzungen erhalten Sie Karriereberatung, Hilfe bei der Bewältigung von Herausforderungen und Unterstützung bei der Festlegung erreichbarer Ziele für Ihr persönliches und berufliches Wachstum."
+    },
+    "mentoring": {
+      "title": "Mentoring für Studierende",
+      "desc": "Individuelle Unterstützung bei akademischen Entscheidungen, Praktika, Jobmöglichkeiten und Kompetenzentwicklung.",
+      "long-text": "Mentoring-Programme, die speziell auf Studierende zugeschnitten sind, die eine Ausbildung oder Karriere im Wirtschaftssektor anstreben. Durch Mentoring erhalten Sie Anleitung, Unterstützung und praktische Ratschläge, die Ihnen dabei helfen, Ihren Bildungsweg oder Ihre ersten Karrierephasen zu meistern. Ob es darum geht, Studierenden bei der Auswahl der richtigen Studiengänge zu helfen, Einblicke in Praktika und Stellenangebote zu geben oder sie bei der Entwicklung wichtiger Fähigkeiten und beim Aufbau von Netzwerken zu beraten – meine Mentoring-Dienste können Sie dabei unterstützen, fundierte Entscheidungen zu treffen, sinnvolle Ziele zu setzen und auf Ihrem gewählten Weg erfolgreich zu sein. Indem ich meine eigenen Erfahrungen, Kenntnisse und Branchenkontakte mit Ihnen teile, werden Sie inspiriert und Ihre persönliche und berufliche Entwicklung gefördert."
+    },
+    "contact": "Jetzt Kontaktieren",
+    "read-more": "Mehr Lesen",
+    "read-less": "Weniger Lesen"
+  },
+  "contact": {
+    "title": "Kontakt",
+    "sub-title": "kontaktieren-sie-uns",
+    "input": {
+      "first-name": "Vorname",
+      "email": "E-Mail-Adresse",
+      "phone": "Telefonnummer",
+      "message": "Nachricht"
+    },
+    "error-input": {
+      "first-name": "Dieses Feld ist erforderlich. Bitte geben Sie Ihren Namen ein.",
+      "email": "Dieses Feld ist erforderlich. Bitte geben Sie eine gültige E-Mail-Adresse ein.",
+      "not-valid-email": "Dies ist keine gültige E-Mail-Adresse."
     }
   }
 }

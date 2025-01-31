@@ -1,47 +1,77 @@
 {
+  "navbar": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "publications": "Publications",
+    "cv": "CV",
+    "contact": "Contact"
+  },
+  "footer": {
+    "copyright": "2025 © All rights reserved by Vision Goal LLC",
+    "information": "Official Info"
+  },
   "about-us": {
-    "title": "About us",
-    "header": "Financial training and education - Mentorship and coaching",
-    "text-1": "Hello, I’m Andreas Svoboda, a passionate professional with a strong focus on coaching, mentoring, and teaching. With a diverse background and extensive experience in the financial industry, I have dedicated my career to empowering individuals and organizations to achieve their fullest potential. With that purpose in mind I set up Vision Goal LLC in 2022.",
-    "text-2": "Teaching and mentoring have become my true passion. As a Professor at United International Business Schools (UIBS) in Zurich and Geneva, I lecture on subjects including accounting, finance, and global banking, shaping the minds of students pursuing Bachelor’s and Master’s degrees. Additionally, I serve as the Department Head of Finance and Leadership, Banking and Finance at the Swiss Distance University of Applied Sciences (FFHS), where I guide aspiring professionals in their academic and professional development.",
-    "text-3": "In addition to these roles, I have had the privilege of teaching at HSO in Zurich, Rapperswil, and Baar, with a specific focus on the EMBA program. At HSO, I have contributed to the education and growth of experienced professionals pursuing advanced degrees.",
-    "professional-career": {
-      "title": "Professional Career:",
-      "text": "Throughout my career, I have worked in various leadership roles, gaining valuable insights and expertise. I have held positions at notable companies, including Bank Julius Bär& Co. AG in Switzerland and Singapore, where I currently serve as the Head of Wealth Planning (WP) Life & Pension. I have also made significant contributions at the Liechtenstein Insurance Association, where I served as a Board Member, focusing on communication, marketing, public relations, strategy work, advocacy, and financial planning. Furthermore, I held the position of Management Director and Head of Finance at Wealth Assurance AG, where I managed the insurance company and oversaw strategic orientation, risk management, and key operational functions."
+    "title": "About Us",
+    "header": "Financial Training and Education - Mentorship and Coaching",
+    "intro": "Hello, I’m Andreas Svoboda, founder of Vision Goal LLC (est. 2022). With extensive experience in finance, I focus on coaching, mentoring, and teaching to empower individuals and organizations.",
+    "teaching": "I lecture at UIBS in Zurich and Geneva on accounting, finance, and global banking and lead finance programs at FFHS. I also contribute to HSO’s EMBA program, helping professionals advance their careers.",
+    "career": {
+      "title": "Professional Career",
+      "text": "I have held leadership roles at Bank Julius Bär & Co. AG, Liechtenstein Insurance Association, and Wealth Assurance AG, gaining expertise in wealth planning, strategy, and risk management."
     },
-    "teaching-experience-1": {
-      "title": "Education and Teaching Experience:",
-      "text-1": "My dedication to continuous learning and professional development is reflected in my academic journey. I hold a LL.M. UZH International Business Law from the University of Zurich, a Master of Science Professional Accountancy from the University of London, and a Doctor of Business Administration from the University of Liverpool. In addition to my academic achievements, I have obtained a Master of Business Administration from the University of Southern Queensland and a Betriebsökonom HWV from the Hochschule für Wirtschaft Zürich HWZ.",
-      "text-2": "As a finance professional turned educator, I bring a wealth of expertise and real-world experience to the classroom. I am committed to delivering engaging and impactful lessons that inspire students to succeed in their careers and make a difference in the world. My teaching roles at UIBS, FFHS, and HSO allow me to shape the next generation of professionals, imparting knowledge at both Bachelor’s and Master’s levels."
+    "education": {
+      "title": "Education and Teaching Experience",
+      "text": "I hold degrees including an LL.M. in International Business Law, an MSc in Professional Accountancy, and a DBA. My teaching spans multiple institutions and levels, shaping the next generation of professionals."
     },
     "skills": {
-      "title": "Skills and Expertise:",
-      "text": "With fluency in German and English, I possess strong communication skills that enable me to connect effectively with diverse audiences. Throughout my career, I have demonstrated exceptional leadership, strategic thinking, and analytical abilities. My expertise spans areas such as financial planning, risk management, accounting, and investment management. I am well-versed in the intricacies of the finance industry and possess a deep understanding of sustainable finance, capital markets, and portfolio management."
+      "title": "Skills and Expertise",
+      "text": "Fluent in German and English, I specialize in financial planning, risk management, accounting, and investment, with deep knowledge of sustainable finance and capital markets."
     },
-    "professional-passion": {
-      "title": "My Professional Passion:",
-      "text": "As a seasoned professional, I am driven by a passion for coaching, mentoring, and teaching. I am dedicated to empowering individuals and organizations, helping them realize their goals and unlock their full potential. With a diverse skill set, a deep understanding of the financial industry, and a commitment to continuous growth and learning, I am excited to collaborate with motivated individuals and contribute to their success."
+    "passion": {
+      "title": "My Professional Passion",
+      "text": "I am passionate about coaching and mentoring, helping individuals unlock their full potential through strategic guidance and education."
     }
   },
   "services": {
     "title": "Services",
     "wealth-planning": {
       "title": "Wealth Planning and Financial Coaching",
-      "sub-title": "Personalized wealth planning and financial coaching services.",
-      "desc": "I can help you to assess your financial goals, develop customized wealth management strategies, and provide guidance on investments, retirement planning, insurance, and risk management. You will get empower to make informed financial decisions and achieve your long-term financial objectives."
+      "desc": "Customized strategies for investments, retirement, insurance, and risk management to help you achieve long-term financial goals.",
+      "long-text": "I can help you to assess your financial goals, develop customized wealth management strategies, and provide guidance on investments, retirement planning, insurance, and risk management. You will get empower to make informed financial decisions and achieve your long-term financial objectives."
     },
     "lectures": {
-      "title": "Lectures and Workshops on Finance and Business",
-      "desc": "Lectures and workshops in educational institutions or corporate settings. Thanks to my expertise in accounting, finance, global banking, and business innovation I will deliver well-suited engaging and insightful sessions. Whether it’s teaching undergraduate or graduate students or providing professional development training to corporate professionals, I will share my knowledge, insights, and practical examples to enhance financial literacy and business acumen."
+      "title": "Lectures and Workshops",
+      "desc": "Educational sessions on finance, accounting, and business innovation for students and corporate professionals.",
+      "long-text": "Lectures and workshops in educational institutions or corporate settings. Thanks to my expertise in accounting, finance, global banking, and business innovation I will deliver well-suited engaging and insightful sessions. Whether it’s teaching undergraduate or graduate students or providing professional development training to corporate professionals, I will share my knowledge, insights, and practical examples to enhance financial literacy and business acumen."
     },
     "leadership": {
       "title": "Leadership and Career Mentoring",
-      "desc": "With my experience as a board member, management director, and head of departments, I will guide aspiring professionals and emerging leaders in developing their leadership skills, strategic thinking, and decision-making abilities. Through one-on-one mentoring sessions, you will get career guidance, help to navigate challenges, and assistance in setting achievable goals for personal and professional growth"
+      "desc": "Guidance for aspiring professionals to develop leadership, strategic thinking, and career planning skills.",
+      "long-text": "With my experience as a board member, management director, and head of departments, I will guide aspiring professionals and emerging leaders in developing their leadership skills, strategic thinking, and decision-making abilities. Through one-on-one mentoring sessions, you will get career guidance, help to navigate challenges, and assistance in setting achievable goals for personal and professional growth"
     },
     "mentoring": {
       "title": "Mentoring for Students",
-      "desc": "Mentorship programs specifically tailored to students pursuing education or careers in the business sector. Through mentorship, you will get guidance, support, and practical advice to help you navigate your educational journey or early career stages. Whether it’s assisting students in selecting the right academic programs, offering insights on internships and job opportunities, or providing guidance on developing essential skills and networking, my mentoring services can empower you to make informed decisions, set meaningful goals, and succeed in your chosen paths. By sharing my own experiences, knowledge, and industry connections, You will get inspire and foster your personal and professional development."
+      "desc": "Tailored support for students in academic choices, internships, job opportunities, and skill development.",
+      "long-text": "Mentorship programs specifically tailored to students pursuing education or careers in the business sector. Through mentorship, you will get guidance, support, and practical advice to help you navigate your educational journey or early career stages. Whether it’s assisting students in selecting the right academic programs, offering insights on internships and job opportunities, or providing guidance on developing essential skills and networking, my mentoring services can empower you to make informed decisions, set meaningful goals, and succeed in your chosen paths. By sharing my own experiences, knowledge, and industry connections, You will get inspire and foster your personal and professional development."
     },
-    "contact": "Contact Now"
+    "contact": "Contact Now",
+    "read-more": "Read More",
+    "read-less": "Read Less"
+  },
+  "contact": {
+    "title": "Contact",
+    "sub-title": "contact-us",
+    "input": {
+      "first-name": "First Name",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "message": "Message"
+    },
+    "error-input": {
+      "first-name": "This field is required. Please input your name.",
+      "email": "This field is required. Please input a valid email.",
+      "not-valid-email": "This is not valid email."
+    }
   }
 }
