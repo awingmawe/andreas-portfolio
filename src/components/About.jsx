@@ -1,206 +1,320 @@
 'use client'
 
-import React from 'react'
-import { Box, Container, Typography, Grid, Button } from '@mui/material'
+import React, { useState } from 'react'
+import {
+  Box,
+  Typography,
+  Container,
+  Accordion,
+  AccordionSummary,
+  AccordionDetails,
+  Grid2,
+  Button,
+} from '@mui/material'
 import { motion } from 'framer-motion'
+import { useTranslations } from 'next-intl'
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
+import Image from 'next/image'
+import Andreas from '../assets/andreas-2.jpeg'
+import EducationTree from './Education'
 
-const AboutUs = () => {
-  const fadeInAnimation = {
-    initial: { opacity: 0 },
-    animate: { opacity: 1 },
-    transition: { duration: 1 },
-  }
+const AboutUsSection = () => {
+  const t = useTranslations('about-us')
 
-  const slideUpAnimation = {
-    initial: { y: 50, opacity: 0 },
-    animate: { y: 0, opacity: 1 },
-    transition: { duration: 0.8 },
-  }
-
-  const staggerAnimation = {
-    initial: { opacity: 0, y: 20 },
-    animate: index => ({
-      opacity: 1,
+  // Animation variants
+  const containerVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
       y: 0,
-      transition: { delay: index * 0.2, duration: 0.8 },
-    }),
+      opacity: 1,
+      transition: { duration: 0.8, ease: 'easeInOut' },
+    },
   }
 
-  const personalInfo = [
-    { label: 'Name', value: 'James Smith' },
-    { label: 'Phone', value: '+123 456 7890' },
-    { label: 'Age', value: '29 Years' },
-    { label: 'Email', value: 'hello@thames.com' },
-    { label: 'Occupation', value: 'System Engineer' },
-    { label: 'Nationality', value: 'Bangladeshi' },
-  ]
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: { y: 0, opacity: 1 },
+  }
+
+  // State to manage accordion expansion
+  const [expanded, setExpanded] = useState('career')
+
+  const handleChange = panel => (event, isExpanded) => {
+    setExpanded(isExpanded ? panel : false)
+  }
+
+  const downloadPDF = () => {
+    const pdfUrl = '/2023-CV-Svoboda.pdf'
+    const link = document.createElement('a')
+    link.href = pdfUrl
+    link.download = '2023-CV-Svoboda.pdf'
+    document.body.appendChild(link)
+    link.click()
+    document.body.removeChild(link)
+  }
 
   return (
     <Box
-      component={motion.div}
-      initial='initial'
-      animate='animate'
-      variants={fadeInAnimation}
+      component='section'
+      id='about'
       sx={{
-        py: 8,
-        background: 'linear-gradient(135deg, #f9f9f9, #e0e0e0)',
+        backgroundColor: '#e2ecf6',
+        backgroundImage:
+          'url("https://www.transparenttextures.com/patterns/otis-redding.png")',
+        py: 5,
       }}
     >
       <Container maxWidth='lg'>
-        {/* Header Section */}
-        <Box
-          sx={{
-            textAlign: 'center',
-            mb: 8,
+        {/* Title */}
+        <motion.div
+          variants={containerVariants}
+          initial='hidden'
+          whileInView='visible'
+          viewport={{ once: false }}
+          style={{
+            display: 'flex',
+            flexDirection: 'row',
+            justifyContent: 'space-between',
+            alignItems: 'center',
           }}
         >
           <Typography
-            component={motion.h1}
-            initial='hidden'
-            whileInView='visible'
-            viewport={{ once: true }}
-            variants={slideUpAnimation}
             variant='h2'
+            color='ternary'
             sx={{
-              fontWeight: 'bold',
-              color: 'primary.main',
-              mb: 2,
+              textAlign: 'left',
             }}
           >
-            ABOUT ME
+            {t('title')}
           </Typography>
-          <Typography
-            component={motion.h2}
-            initial='hidden'
-            whileInView='visible'
-            viewport={{ once: true }}
-            variants={slideUpAnimation}
-            variant='h4'
-            sx={{
-              fontWeight: 'bold',
-              color: 'text.primary',
-              mb: 4,
-            }}
+          <Box
+            sx={{ textAlign: 'center', display: { xs: 'none', md: 'block' } }}
           >
-            I Develop Systems That Work
-          </Typography>
-          <Typography
-            variant='body1'
-            sx={{
-              maxWidth: '800px',
-              mx: 'auto',
-              color: 'text.secondary',
-            }}
-          >
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-            officia deserunt mollit anim id est laborum doloremque laudantium,
-            totaeaque ipsa quae ab illo inventore veritatis et quasi architecto
-            beatae vitae.
-          </Typography>
-        </Box>
+            <Button
+              color='ternary'
+              variant='contained'
+              sx={{
+                width: 'fit-content',
+                color: 'common.white',
+              }}
+              onClick={downloadPDF}
+            >
+              Download CV
+            </Button>
+          </Box>
+        </motion.div>
 
-        {/* Personal Information Section */}
-        <Box
-          sx={{
-            backgroundColor: 'common.white',
-            borderRadius: 2,
-            p: 4,
-            boxShadow: '0px 4px 20px rgba(0, 0, 0, 0.1)',
-            mb: 6,
-          }}
+        <Grid2
+          container
+          spacing={{ xs: 2, md: 4 }}
+          alignItems='stretch'
+          mt={{ xs: 2, md: 5 }}
         >
-          <Typography
-            variant='h5'
-            sx={{
-              fontWeight: 'bold',
-              mb: 4,
-              color: 'primary.main',
-            }}
-          >
-            Personal Information
-          </Typography>
-          <Grid container spacing={4}>
-            {personalInfo.map((info, index) => (
-              <Grid item xs={12} sm={6} key={info.label}>
-                <Typography
-                  component={motion.div}
-                  initial='initial'
-                  whileInView='animate'
-                  viewport={{ once: true }}
-                  variants={staggerAnimation}
-                  custom={index}
-                  variant='body1'
+          <Grid2 size={{ xs: 12, md: 4 }}>
+            <motion.div
+              variants={containerVariants}
+              initial='hidden'
+              whileInView='visible'
+              viewport={{ once: false }}
+              style={{ display: 'flex', justifyContent: 'center' }}
+            >
+              <Box
+                sx={{
+                  width: {
+                    xs: '100%',
+                    sm: '50%',
+                    md: '100%',
+                  },
+                }}
+              >
+                <Image
+                  src={Andreas} // Replace with your image path
+                  alt='About Us'
+                  width={0}
+                  height={0}
+                  sizes='100vw'
+                  style={{
+                    height: 'auto',
+                    width: '100%',
+                    objectFit: 'contain',
+                    margin: 'auto',
+                  }}
+                />
+              </Box>
+            </motion.div>
+          </Grid2>
+          <Grid2 size={{ xs: 12, md: 8 }}>
+            <Box
+              sx={{
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'space-between',
+                height: '100%',
+              }}
+            >
+              <Box
+                sx={{
+                  mb: { xs: 2, md: 0 },
+                }}
+              >
+                <motion.div
+                  variants={containerVariants}
+                  initial='hidden'
+                  whileInView='visible'
+                  viewport={{ once: false }}
+                >
+                  {/* Header */}
+
+                  <Typography
+                    variant='h6'
+                    color='text.secondary'
+                    sx={{
+                      mb: 2,
+                    }}
+                  >
+                    {t('header')}
+                  </Typography>
+                </motion.div>
+
+                <motion.div
+                  variants={containerVariants}
+                  initial='hidden'
+                  whileInView='visible'
+                  viewport={{ once: false }}
+                >
+                  <Typography
+                    variant='body1'
+                    sx={{
+                      textAlign: 'left',
+                    }}
+                    color='text.secondary'
+                  >
+                    {t('intro')}
+                  </Typography>
+                </motion.div>
+              </Box>
+              <motion.div
+                variants={containerVariants}
+                initial='hidden'
+                whileInView='visible'
+                viewport={{ once: false }}
+              >
+                <Accordion
+                  expanded={expanded === 'career'}
+                  onChange={handleChange('career')}
                   sx={{
-                    fontWeight: 'bold',
-                    color: 'text.primary',
+                    mb: 2,
+                    boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.1)',
+                    '&:before': {
+                      display: 'none', // Remove the :before pseudo-element
+                    },
                   }}
                 >
-                  {info.label}
-                </Typography>
-                <Typography
-                  variant='body1'
+                  <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+                    <Typography variant='h6' sx={{ color: '#063970' }}>
+                      {t('career.title')}
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography variant='body1' sx={{ color: '#666' }}>
+                      {t('career.text')}
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
+
+                <Accordion
+                  expanded={expanded === 'education'}
+                  onChange={handleChange('education')}
                   sx={{
-                    color: 'text.secondary',
+                    mb: 2,
+                    boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.1)',
+                    '&:before': {
+                      display: 'none', // Remove the :before pseudo-element
+                    },
                   }}
                 >
-                  {info.value}
-                </Typography>
-              </Grid>
-            ))}
-          </Grid>
-        </Box>
+                  <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+                    <Typography variant='h6' sx={{ color: '#063970' }}>
+                      {t('education.title')}
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography variant='body1' sx={{ color: '#666' }}>
+                      {t('education.text')}
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
+                <Accordion
+                  expanded={expanded === 'skills'}
+                  onChange={handleChange('skills')}
+                  sx={{
+                    mb: 2,
+                    boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.1)',
+                    '&:before': {
+                      display: 'none', // Remove the :before pseudo-element
+                    },
+                  }}
+                >
+                  <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+                    <Typography variant='h6' sx={{ color: '#063970' }}>
+                      {t('skills.title')}
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography variant='body1' sx={{ color: '#666' }}>
+                      {t('skills.text')}
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
 
-        {/* Professional Experience Section */}
-        <Box
-          sx={{
-            backgroundColor: 'common.white',
-            borderRadius: 2,
-            p: 4,
-            boxShadow: '0px 4px 20px rgba(0, 0, 0, 0.1)',
-          }}
-        >
-          <Typography
-            variant='h5'
-            sx={{
-              fontWeight: 'bold',
-              mb: 4,
-              color: 'primary.main',
-            }}
-          >
-            Professional Experience
-          </Typography>
-          <Typography
-            variant='body1'
-            sx={{
-              fontWeight: 'bold',
-              mb: 2,
-              color: 'text.primary',
-            }}
-          >
-            BRUCE WAYNE
-          </Typography>
-          <Typography
-            variant='body1'
-            sx={{
-              mb: 2,
-              color: 'text.secondary',
-            }}
-          >
-            Software Architect, Google Inc.
-          </Typography>
-          <Typography
-            variant='body1'
-            sx={{
-              color: 'text.secondary',
-            }}
-          >
-            Oremque laudantium, totaeaque ipsa quae ab illo inventore veritatis
-            et quasi architecto beatae vitae.
-          </Typography>
-        </Box>
+                <Accordion
+                  expanded={expanded === 'passion'}
+                  onChange={handleChange('passion')}
+                  sx={{
+                    mb: 2,
+                    boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.1)',
+                    '&:before': {
+                      display: 'none', // Remove the :before pseudo-element
+                    },
+                  }}
+                >
+                  <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+                    <Typography variant='h6' sx={{ color: '#063970' }}>
+                      {t('passion.title')}
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography variant='body1' sx={{ color: '#666' }}>
+                      {t('passion.text')}
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
+              </motion.div>
+              <Box
+                sx={{
+                  textAlign: 'center',
+                  display: { xs: 'block', md: 'none' },
+                }}
+              >
+                <Button
+                  color='ternary'
+                  variant='contained'
+                  sx={{
+                    width: '100%',
+                    color: 'common.white',
+                    mt: 2,
+                  }}
+                  onClick={downloadPDF}
+                >
+                  Download CV
+                </Button>
+              </Box>
+            </Box>
+          </Grid2>
+        </Grid2>
       </Container>
     </Box>
   )
 }
 
-export default AboutUs
+export default AboutUsSection

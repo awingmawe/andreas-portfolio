@@ -4,6 +4,7 @@ import Banner from '../../components/Banner'
 import ServicesCard from '../../components/Services'
 import { Fragment } from 'react'
 import AboutUs from '../../components/About'
+import CertificateSection from '../../components/Achievement'
 
 export async function generateMetadata() {
   return {
@@ -15,6 +16,7 @@ export default async function Page() {
   return (
     <Fragment>
       <Banner />
+      <CertificateSection />
       <AboutUs />
       <ServicesCard />
       <Box sx={{ height: 500 }}>Halo</Box>

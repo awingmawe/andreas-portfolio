@@ -4,19 +4,27 @@ import {
   AppBar,
   Box,
   Container,
+  IconButton,
   Stack,
   Toolbar,
   Typography,
 } from '@mui/material'
+import { motion, AnimatePresence } from 'framer-motion'
 import Image from 'next/image'
 import Logo from '../assets/thumbnail.png'
 import { useEffect, useState } from 'react'
+import { useRouter } from '../i18n/routing'
+import { useLocale, useTranslations } from 'next-intl'
+import enFlag from '../assets/united-kingdom.png'
+import deFlag from '../assets/german.png'
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [activeSection, setActiveSection] = useState('home') // Track active section
+  const router = useRouter()
+  const locale = useLocale()
+  const t = useTranslations('navbar')
 
-  // Handle scroll event for navbar background
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 50) {
@@ -59,12 +67,16 @@ export default function Navbar() {
     const section = document.getElementById(id)
     if (section) {
       window.scrollTo({
-        top: section.offsetTop,
+        top: section.offsetTop - 100,
         behavior: 'smooth',
       })
       // Update the URL without adding the hash
       history.replaceState(null, '', window.location.pathname)
     }
+  }
+
+  const handleLanguageChange = locale => {
+    router.replace(`/`, { locale })
   }
 
   return (
@@ -99,39 +111,103 @@ export default function Navbar() {
                 padding: '16px 0px',
               }}
             />
-            <Stack direction='row' spacing={3}>
-              {['home', 'about', 'services', 'publications', 'contact'].map(
-                section => (
-                  <Typography
-                    key={section}
-                    onClick={() => handleScrollToSection(section)}
-                    sx={{
-                      position: 'relative',
-                      cursor: 'pointer',
-                      '&::after': {
-                        content: '""',
-                        position: 'absolute',
-                        left: 0,
-                        bottom: '-4px',
-                        width: '100%',
-                        height: '2px',
-                        backgroundColor:
-                          activeSection === section ? '#063970' : 'transparent',
-                        transform:
-                          activeSection === section ? 'scaleX(1)' : 'scaleX(0)',
-                        transition:
-                          'transform 0.3s ease-in-out, background-color 0.3s ease-in-out',
-                      },
-                      '&:hover::after': {
-                        transform: 'scaleX(1)',
-                        backgroundColor: '#063970',
-                      },
+            <Stack direction='row' spacing={3} alignItems='center'>
+              {[
+                'home',
+                'about',
+                'services',
+                'experience',
+                'education',
+                'publications',
+                'contact',
+              ].map(section => (
+                <Typography
+                  key={section}
+                  onClick={() => handleScrollToSection(section)}
+                  sx={{
+                    position: 'relative',
+                    cursor: 'pointer',
+                    '&::after': {
+                      content: '""',
+                      position: 'absolute',
+                      left: 0,
+                      bottom: '-4px',
+                      width: '100%',
+                      height: '2px',
+                      backgroundColor:
+                        activeSection === section ? '#063970' : 'transparent',
+                      transform:
+                        activeSection === section ? 'scaleX(1)' : 'scaleX(0)',
+                      transition:
+                        'transform 0.3s ease-in-out, background-color 0.3s ease-in-out',
+                    },
+                    '&:hover::after': {
+                      transform: 'scaleX(1)',
+                      backgroundColor: '#063970',
+                    },
+                  }}
+                >
+                  {t(`${section}`)}
+                </Typography>
+              ))}
+              <motion.div
+                whileTap={{ scale: 0.9 }}
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  cursor: 'pointer',
+                }}
+              >
+                <Box
+                  onClick={() =>
+                    handleLanguageChange(locale === 'en' ? 'de' : 'en')
+                  }
+                  sx={{
+                    width: '60px',
+                    height: '30px',
+                    borderRadius: '15px',
+                    backgroundColor: scrolled ? '#063970' : 'common.white',
+                    position: 'relative',
+                    transition: 'background-color 0.8s ease-in-out',
+                    display: 'flex',
+                    alignItems: 'center',
+                    py: '2px',
+                    px: 1,
+                    cursor: 'pointer',
+                  }}
+                >
+                  <motion.div
+                    style={{
+                      width: '26px',
+                      height: '26px',
+                      borderRadius: '13px',
+                      backgroundColor: '#063970',
+                      position: 'absolute',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      overflow: 'hidden',
                     }}
+                    initial={{
+                      x: locale === 'en' ? 30 : 0,
+                    }}
+                    animate={{
+                      x: locale === 'en' ? 0 : 30,
+                    }}
+                    transition={{ type: 'spring', stiffness: 300, damping: 20 }}
                   >
-                    {section.charAt(0).toUpperCase() + section.slice(1)}
-                  </Typography>
-                ),
-              )}
+                    <Image
+                      src={locale === 'en' ? enFlag : deFlag}
+                      alt={locale === 'en' ? 'US Flag' : 'German Flag'}
+                      width={20}
+                      height={20}
+                      style={{
+                        objectFit: 'cover',
+                      }}
+                    />
+                  </motion.div>
+                </Box>
+              </motion.div>
             </Stack>
           </Box>
         </Container>

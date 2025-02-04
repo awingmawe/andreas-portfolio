@@ -3,6 +3,8 @@
     "home": "Startseite",
     "about": "Über uns",
     "services": "Dienstleistungen",
+    "experience": "Erfahrung",
+    "education": "Ausbildung",
     "publications": "Publikationen",
     "cv": "Lebenslauf",
     "contact": "Kontakt"
@@ -11,11 +13,18 @@
     "copyright": "2025 © Alle Rechte vorbehalten von Vision Goal LLC",
     "information": "Offizielle Informationen"
   },
+  "banner": {
+    "founder": "Gründer von",
+    "hello": "Sag Hallo"
+  },
   "about-us": {
-    "title": "Über uns",
+    "title": "Über Andreas",
     "header": "Finanztraining und Bildung - Mentoring und Coaching",
     "intro": "Hallo, ich bin Andreas Svoboda, Gründer von Vision Goal LLC (gegründet 2022). Mit umfassender Erfahrung in der Finanzbranche konzentriere ich mich auf Coaching, Mentoring und Lehre, um Einzelpersonen und Organisationen zu stärken.",
-    "teaching": "Ich unterrichte an der UIBS in Zürich und Genf in den Bereichen Rechnungswesen, Finanzen und globales Banking und leite Finanzprogramme an der FFHS. Zudem trage ich zum EMBA-Programm der HSO bei und unterstütze Fachleute in ihrer beruflichen Weiterentwicklung.",
+    "teaching": {
+      "title": "Lehre und Vorträge",
+      "text": "Ich unterrichte an der UIBS in Zürich und Genf in den Bereichen Rechnungswesen, Finanzen und globales Banking und leite Finanzprogramme an der FFHS. Zudem trage ich zum EMBA-Programm der HSO bei und unterstütze Fachleute in ihrer beruflichen Weiterentwicklung."
+    },
     "career": {
       "title": "Berufliche Laufbahn",
       "text": "Ich habe Führungspositionen bei der Bank Julius Bär & Co. AG, dem Liechtensteinischen Versicherungsverband und Wealth Assurance AG innegehabt und Fachwissen in Vermögensplanung, Strategie und Risikomanagement erworben."
@@ -58,6 +67,29 @@
     "contact": "Jetzt Kontaktieren",
     "read-more": "Mehr Lesen",
     "read-less": "Weniger Lesen"
+  },
+  "certificate": {
+    "title": "Zertifikat",
+    "1": {
+      "title": "Chartered Certified Accountant (FCCA)",
+      "description": "Weltweit als prestigeträchtige Qualifikation im Finanz- und Rechnungswesen anerkannt. Die FCCA-Bezeichnung genießt im Unternehmens- und öffentlichen Rechnungswesen einen hohen Stellenwert."
+    },
+    "2": {
+      "title": "Certified Financial Planner (CFP®)",
+      "description": "Gilt als Goldstandard für Finanzplanungsexperten. Es ist unerlässlich für Karrieren in den Bereichen persönliche Finanzen, Vermögensverwaltung und Altersvorsorge."
+    },
+    "3": {
+      "title": "Zertifikat in Datenanalyse: Think Ahead ACCA",
+      "description": "Da Datenanalysen in allen Branchen immer wichtiger werden, entspricht diese Zertifizierung dem wachsenden Bedarf an datengesteuerter Entscheidungsfindung im Finanzwesen und darüber hinaus."
+    },
+    "4": {
+      "title": "Beherrschung der Datenanalyse in Excel von der Duke University (CCC)",
+      "description": "Excel bleibt ein wichtiges Werkzeug im Finanz-, Rechnungswesen- und Geschäftswesen. Diese von der Duke University angebotene Zertifizierung gewährleistet fundierte Grundkenntnisse in der effektiven Datenanalyse."
+    },
+    "5": {
+      "title": "Anlageverwaltung durch HEC Paris und AXA Investment Managers (CCC)",
+      "description": "Eine Zertifizierung, die akademische Exzellenz mit Branchenexpertise verbindet und sich auf moderne Investmentmanagementpraktiken konzentriert, die in der Vermögensverwaltung sehr gefragt sind."
+    }
   },
   "contact": {
     "title": "Kontakt",

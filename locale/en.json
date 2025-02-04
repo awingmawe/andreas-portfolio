@@ -3,6 +3,8 @@
     "home": "Home",
     "about": "About",
     "services": "Services",
+    "experience": "Experience",
+    "education": "Education",
     "publications": "Publications",
     "cv": "CV",
     "contact": "Contact"
@@ -11,11 +13,18 @@
     "copyright": "2025 © All rights reserved by Vision Goal LLC",
     "information": "Official Info"
   },
+  "banner": {
+    "founder": "Founder of",
+    "hello": "Say Hello"
+  },
   "about-us": {
-    "title": "About Us",
+    "title": "About Andreas",
     "header": "Financial Training and Education - Mentorship and Coaching",
     "intro": "Hello, I’m Andreas Svoboda, founder of Vision Goal LLC (est. 2022). With extensive experience in finance, I focus on coaching, mentoring, and teaching to empower individuals and organizations.",
-    "teaching": "I lecture at UIBS in Zurich and Geneva on accounting, finance, and global banking and lead finance programs at FFHS. I also contribute to HSO’s EMBA program, helping professionals advance their careers.",
+    "teaching": {
+      "title": "Teaching and Lecturing",
+      "text": "I lecture at UIBS in Zurich and Geneva on accounting, finance, and global banking and lead finance programs at FFHS. I also contribute to HSO’s EMBA program, helping professionals advance their careers."
+    },
     "career": {
       "title": "Professional Career",
       "text": "I have held leadership roles at Bank Julius Bär & Co. AG, Liechtenstein Insurance Association, and Wealth Assurance AG, gaining expertise in wealth planning, strategy, and risk management."
@@ -59,6 +68,29 @@
     "read-more": "Read More",
     "read-less": "Read Less"
   },
+  "certificate": {
+    "title": "Certificate",
+    "1": {
+      "title": "Chartered Certified Accountant (FCCA)",
+      "description": "Recognized globally as a prestigious qualification in finance and accounting. The FCCA designation is highly valued in corporate and public accounting sectors."
+    },
+    "2": {
+      "title": "Certified Financial Planner (CFP®)",
+      "description": "Regarded as a gold standard for financial planning professionals. It is essential for careers in personal finance, wealth management, and retirement planning."
+    },
+    "3": {
+      "title": "Certificate in Data Analytics: Think Ahead ACCA",
+      "description": "With data analytics becoming crucial across industries, this certification aligns with the growing need for data-driven decision-making in finance and beyond."
+    },
+    "4": {
+      "title": "Mastering Data Analysis in Excel by Duke University (CCC)",
+      "description": "Excel remains a vital tool in finance, accounting, and business. This certification, offered by Duke University, ensures strong foundational knowledge in analyzing data effectively."
+    },
+    "5": {
+      "title": "Investment Management by HEC Paris and AXA Investment Managers (CCC)",
+      "description": "A certification that merges academic excellence with industry expertise, focusing on modern investment management practices, highly sought after in asset management."
+    }
+  },
   "contact": {
     "title": "Contact",
     "sub-title": "contact-us",
@@ -73,5 +105,6 @@
       "email": "This field is required. Please input a valid email.",
       "not-valid-email": "This is not valid email."
     }
-  }
+  },
+  "experience": {}
 }

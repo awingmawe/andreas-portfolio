@@ -12,9 +12,11 @@ import {
 import Image from 'next/image'
 import Andreas from '../assets/andreas-removebg-preview.png'
 import { motion } from 'framer-motion'
+import { useTranslations } from 'next-intl'
 
 function Banner() {
   const theme = useTheme()
+  const t = useTranslations('banner')
   const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'))
   return (
     <Box
@@ -57,7 +59,7 @@ function Banner() {
                     ease: 'easeInOut',
                   }}
                 >
-                  Founder of
+                  {t('founder')}
                 </motion.span>{' '}
                 <motion.span
                   initial={{ color: '#063970' }} // Initial color for "Vision Goal LLC"
@@ -81,7 +83,7 @@ function Banner() {
                   mt: 4,
                 }}
               >
-                Say Hello
+                {t('hello')}
               </Button>
             </Box>
           </Grid2>
