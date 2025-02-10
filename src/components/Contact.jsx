@@ -139,6 +139,16 @@ const ContactMe = () => {
       }}
     >
       <Container maxWidth='lg'>
+        <Typography
+          variant='h2'
+          color='white'
+          sx={{
+            textAlign: 'left',
+            mb: 4,
+          }}
+        >
+          {t('title')}
+        </Typography>
         <Grid2 container spacing={4}>
           {/* Contact Information */}
           <Grid2 size={{ xs: 12, md: 5 }}>
@@ -152,6 +162,8 @@ const ContactMe = () => {
                 backgroundImage:
                   'url("https://www.transparenttextures.com/patterns/otis-redding.png")',
                 borderRadius: 1,
+                height: '100%',
+                display: 'grid',
               }}
             >
               <MotionPaper

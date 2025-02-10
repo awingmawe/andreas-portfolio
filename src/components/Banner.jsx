@@ -18,6 +18,16 @@ function Banner() {
   const theme = useTheme()
   const t = useTranslations('banner')
   const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'))
+  const handleScrollToSection = () => {
+    const section = document.getElementById('contact')
+    if (section) {
+      window.scrollTo({
+        top: section.offsetTop - 75,
+        behavior: 'smooth',
+      })
+      history.replaceState(null, '', window.location.pathname)
+    }
+  }
   return (
     <Box
       component='section'
@@ -82,6 +92,7 @@ function Banner() {
                   px: 4,
                   mt: 4,
                 }}
+                onClick={handleScrollToSection}
               >
                 {t('hello')}
               </Button>

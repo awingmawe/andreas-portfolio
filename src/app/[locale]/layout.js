@@ -3,6 +3,7 @@ import Navbar from '../../components/Navbar'
 import ThemeProviderWrapper from '../../components/ThemeProvider'
 import { getMessages } from 'next-intl/server'
 import { NextIntlClientProvider } from 'next-intl'
+import CookiesAndScroll from '../../components/Cookies'
 
 export default async function RootLayout(props) {
   const params = await props.params
@@ -18,6 +19,7 @@ export default async function RootLayout(props) {
       <body>
         <ThemeProviderWrapper>
           <NextIntlClientProvider messages={messages}>
+            <CookiesAndScroll />
             <Navbar />
             {children}
           </NextIntlClientProvider>

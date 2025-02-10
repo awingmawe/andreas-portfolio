@@ -67,6 +67,23 @@ const theme = createTheme({
         },
       },
     },
+    MuiSwitch: {
+      styleOverrides: {
+        switchBase: {
+          '&.Mui-checked': {
+            color: '#063970',
+            '& + .MuiSwitch-track': {
+              backgroundColor: '#063970',
+              opacity: 0.5,
+            },
+          },
+        },
+        track: {
+          backgroundColor: '#063970',
+          opacity: 0.2,
+        },
+      },
+    },
   },
 })
 
