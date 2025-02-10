@@ -92,19 +92,153 @@
     }
   },
   "contact": {
-    "title": "Contact",
-    "sub-title": "contact-us",
-    "input": {
-      "first-name": "First Name",
-      "email": "Email Address",
-      "phone": "Phone Number",
-      "message": "Message"
+    "title": "Contact Andreas",
+    "section": {
+      "title": "Get in Touch",
+      "subtitle": "Feel free to reach out. I'd love to hear from you!",
+      "followMe": "Follow Me"
     },
-    "error-input": {
-      "first-name": "This field is required. Please input your name.",
-      "email": "This field is required. Please input a valid email.",
-      "not-valid-email": "This is not valid email."
+    "contactInfo": {
+      "email": "email@example.com",
+      "phone": "+1 234 567 890",
+      "location": "City, Country"
+    },
+    "socialLinks": {
+      "linkedin": "LinkedIn",
+      "github": "GitHub"
+    },
+    "form": {
+      "name": {
+        "label": "Name",
+        "placeholder": "Enter your name",
+        "error": "Please enter your name"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "Enter your email",
+        "error": "Please enter a valid email"
+      },
+      "subject": {
+        "label": "Subject",
+        "placeholder": "Enter subject",
+        "error": "Please enter a subject"
+      },
+      "message": {
+        "label": "Message",
+        "placeholder": "Enter your message",
+        "error": "Please enter your message"
+      },
+      "submit": "Send Message"
     }
   },
-  "experience": {}
+  "experience": {
+    "title": "Experience",
+    "professional": {
+      "bankJuliusBaer": {
+        "company": "Bank Julius Bär & Co. AG, Switzerland/Singapore",
+        "role": "Head of Wealth Planning (WP) Life & Pension",
+        "responsibilities": [
+          "Responsibility for four teams (Life Insurance, Pension, Intermediaries Solutions, and Competence Centre in the WP department)",
+          "Member of the WP Risk Management Committee, WP Management Committee, and Chair of the Offering Committee",
+          "Cost budget and revenue responsibility for Wealth Planning",
+          "Various project responsibilities",
+          "Coordination of the creation of country-specific guidelines",
+          "Development of offering management in Singapore (2012 – 2014)"
+        ]
+      },
+      "liechtensteinInsurance": {
+        "company": "Liechtenstein Insurance Association, Vaduz",
+        "role": "Board Member",
+        "responsibilities": [
+          "Communication, Marketing, Public relations",
+          "Strategy work, advocacy, and financial planning"
+        ]
+      },
+      "wealthAssurance": {
+        "company": "Wealth Assurance AG, Vaduz/Schaan",
+        "role": "Management Director/Head of Finance",
+        "responsibilities": [
+          "Responsible for the management of the insurance company from 2010",
+          "Strategic orientation of the company including risk management",
+          "Management of the Board of Directors meeting, establishment of the insurance company",
+          "Management of accounting and management of the back office (operations, compliance, finance, admin, HR)"
+        ]
+      },
+      "ubs": {
+        "company": "UBS AG and UBS Life Switzerland, Liechtenstein, Ireland",
+        "role": "Head of Finance of UBS Insurance companies",
+        "responsibilities": [
+          "Head of Finance (2002 – 2008)",
+          "CEO of UBS Global Life AG (2004 - 2008)",
+          "Business Unit Controller",
+          "Controller Financial Planning (2001 - 2002)",
+          "Controller Logistics (1999 - 2001)"
+        ]
+      },
+      "creditSuisse": {
+        "company": "Credit Suisse, Rapperswil",
+        "role": "Financial Advisor",
+        "responsibilities": [
+          "Relationship manager for affluent clients as well as small and medium companies"
+        ]
+      },
+      "zurcherKantonalbank": {
+        "company": "Zürcher Kantonalbank, Zurich",
+        "role": "Various functions",
+        "responsibilities": [
+          "Product manager credit and loans",
+          "Relationship manager",
+          "Customer accounting"
+        ]
+      }
+    },
+    "lecture": {
+      "visionGoal": {
+        "company": "Vision Goal LLC. Lachen",
+        "role": "Founder",
+        "responsibilities": ["Coaching and educational service"]
+      },
+      "businessSchools": {
+        "company": "United International Business Schools, Zurich & Geneva",
+        "role": "Professor",
+        "responsibilities": ["Accounting", "Finance", "Global Banking"]
+      },
+      "hso": {
+        "company": "HSO, Zurich, Rapperswil & Baar",
+        "role": "Lecturer",
+        "responsibilities": [
+          "Accounting",
+          "Investment",
+          "EMBA, Business Innovation, Finance and Risk "
+        ]
+      },
+      "insuranceAcademy": {
+        "company": "THE Insurance Academy, Freienbach ",
+        "role": "Founder",
+        "responsibilities": []
+      },
+      "ffhs": {
+        "company": "Swiss Distance University of Applied Sciences, Zurich (FFHS)",
+        "role": "Lecturer",
+        "responsibilities": [
+          "Controlling",
+          "Capital Markets",
+          "Portfolio Management",
+          "Sustainable Finance"
+        ]
+      },
+      "ffhs-2": {
+        "company": "Swiss Distance University of Applied Sciences, Zurich (FFHS)",
+        "role": "Head of Department",
+        "responsibilities": ["Finance and Leadership", "Banking and Finance"]
+      }
+    }
+  },
+  "others": {
+    "professional": "Professional",
+    "lecture": "Lecturer",
+    "see-details": "See Details",
+    "hide-details": "Hide Details",
+    "download": "Download CV"
+  }
 }

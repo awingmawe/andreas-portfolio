@@ -1,5 +1,7 @@
 import { createTheme } from '@mui/material/styles'
 
+const themeDefault = createTheme()
+
 const theme = createTheme({
   palette: {
     primary: {
@@ -17,6 +19,11 @@ const theme = createTheme({
   },
   typography: {
     fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif", // Custom font stack
+    h2: {
+      [themeDefault.breakpoints.down('sm')]: {
+        fontSize: '32px',
+      },
+    },
   },
   components: {
     MuiAppBar: {
@@ -41,6 +48,22 @@ const theme = createTheme({
           background: '#e2ecf6',
           color: '#063970',
           borderRadius: 5,
+        },
+      },
+    },
+    MuiToggleButton: {
+      styleOverrides: {
+        root: {
+          backgroundColor: 'white',
+          color: '#063970',
+          border: '1px solid #063970',
+          '&.Mui-selected': {
+            backgroundColor: '#063970',
+            color: 'white',
+            '&:hover': {
+              backgroundColor: '#063970',
+            },
+          },
         },
       },
     },

@@ -1,10 +1,12 @@
-import { Box } from '@mui/material'
 import { metadata } from '../shared-metadata'
 import Banner from '../../components/Banner'
 import ServicesCard from '../../components/Services'
 import { Fragment } from 'react'
 import AboutUs from '../../components/About'
 import CertificateSection from '../../components/Achievement'
+import ExperienceTimeline from '../../components/Experience'
+import Publication from '../../components/Publication'
+import ContactMe from '../../components/Contact'
 
 export async function generateMetadata() {
   return {
@@ -19,9 +21,9 @@ export default async function Page() {
       <CertificateSection />
       <AboutUs />
       <ServicesCard />
-      <Box sx={{ height: 500 }}>Halo</Box>
-      <Box sx={{ height: 500 }}>Halo</Box>
-      <Box sx={{ height: 500 }}>Halo</Box>
+      <ExperienceTimeline />
+      <Publication />
+      <ContactMe />
     </Fragment>
   )
 }

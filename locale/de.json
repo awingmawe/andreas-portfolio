@@ -92,18 +92,153 @@
     }
   },
   "contact": {
-    "title": "Kontakt",
-    "sub-title": "kontaktieren-sie-uns",
-    "input": {
-      "first-name": "Vorname",
-      "email": "E-Mail-Adresse",
-      "phone": "Telefonnummer",
-      "message": "Nachricht"
+    "title": "Kontakt` Andreas",
+    "section": {
+      "title": "Kontaktieren Sie mich",
+      "subtitle": "Ich freue mich auf Ihre Nachricht!",
+      "followMe": "Folgen Sie mir"
     },
-    "error-input": {
-      "first-name": "Dieses Feld ist erforderlich. Bitte geben Sie Ihren Namen ein.",
-      "email": "Dieses Feld ist erforderlich. Bitte geben Sie eine gültige E-Mail-Adresse ein.",
-      "not-valid-email": "Dies ist keine gültige E-Mail-Adresse."
+    "contactInfo": {
+      "email": "email@example.com",
+      "phone": "+1 234 567 890",
+      "location": "Stadt, Land"
+    },
+    "socialLinks": {
+      "linkedin": "LinkedIn",
+      "github": "GitHub"
+    },
+    "form": {
+      "name": {
+        "label": "Name",
+        "placeholder": "Geben Sie Ihren Namen ein",
+        "error": "Bitte geben Sie Ihren Namen ein"
+      },
+      "email": {
+        "label": "E-Mail",
+        "placeholder": "Geben Sie Ihre E-Mail-Adresse ein",
+        "error": "Bitte geben Sie eine gültige E-Mail-Adresse ein"
+      },
+      "subject": {
+        "label": "Betreff",
+        "placeholder": "Geben Sie einen Betreff ein",
+        "error": "Bitte geben Sie einen Betreff ein"
+      },
+      "message": {
+        "label": "Nachricht",
+        "placeholder": "Geben Sie Ihre Nachricht ein",
+        "error": "Bitte geben Sie Ihre Nachricht ein"
+      },
+      "submit": "Nachricht senden"
     }
+  },
+  "experience": {
+    "title": "Erfahrung",
+    "professional": {
+      "bankJuliusBaer": {
+        "company": "Bank Julius Bär & Co. AG, Schweiz/Singapur",
+        "role": "Leiter Wealth Planning (WP) Life & Pension",
+        "responsibilities": [
+          "Verantwortung für vier Teams (Lebensversicherung, Pension, Vermittlerlösungen und Kompetenzzentrum in der WP-Abteilung)",
+          "Mitglied des WP-Risikomanagementausschusses, des WP-Managementausschusses und Vorsitzender des Angebotsausschusses",
+          "Kostenbudget- und Umsatzverantwortung für Wealth Planning",
+          "Verschiedene Projektverantwortungen",
+          "Koordination der Erstellung länderspezifischer Richtlinien",
+          "Entwicklung des Angebotsmanagements in Singapur (2012 – 2014)"
+        ]
+      },
+      "liechtensteinInsurance": {
+        "company": "Liechtensteinischer Versicherungsverband, Vaduz",
+        "role": "Vorstandsmitglied",
+        "responsibilities": [
+          "Kommunikation, Marketing, Öffentlichkeitsarbeit",
+          "Strategiearbeit, Interessenvertretung und Finanzplanung"
+        ]
+      },
+      "wealthAssurance": {
+        "company": "Wealth Assurance AG, Vaduz/Schaan",
+        "role": "Geschäftsführer/Leiter Finanzen",
+        "responsibilities": [
+          "Verantwortlich für die Führung des Versicherungsunternehmens ab 2010",
+          "Strategische Ausrichtung des Unternehmens einschließlich Risikomanagement",
+          "Leitung der Sitzungen des Verwaltungsrats, Gründung des Versicherungsunternehmens",
+          "Leitung der Buchhaltung und des Backoffice (Operations, Compliance, Finanzen, Verwaltung, HR)"
+        ]
+      },
+      "ubs": {
+        "company": "UBS AG und UBS Life Schweiz, Liechtenstein, Irland",
+        "role": "Leiter Finanzen der UBS Versicherungsgesellschaften",
+        "responsibilities": [
+          "Leiter Finanzen (2002 – 2008)",
+          "CEO der UBS Global Life AG (2004 - 2008)",
+          "Business Unit Controller",
+          "Controller Financial Planning (2001 - 2002)",
+          "Controller Logistics (1999 - 2001)"
+        ]
+      },
+      "creditSuisse": {
+        "company": "Credit Suisse, Rapperswil",
+        "role": "Finanzberater",
+        "responsibilities": [
+          "Relationship Manager für vermögende Privatkunden sowie kleine und mittlere Unternehmen"
+        ]
+      },
+      "zurcherKantonalbank": {
+        "company": "Zürcher Kantonalbank, Zürich",
+        "role": "Verschiedene Funktionen",
+        "responsibilities": [
+          "Produktmanager Kredite und Darlehen",
+          "Relationship Manager",
+          "Kundenbuchhaltung"
+        ]
+      }
+    },
+    "lecture": {
+      "visionGoal": {
+        "company": "Vision Goal LLC. Lachen",
+        "role": "Gründer",
+        "responsibilities": ["Coaching und Bildungsdienstleistungen"]
+      },
+      "businessSchools": {
+        "company": "United International Business Schools, Zürich & Genf",
+        "role": "Professor",
+        "responsibilities": ["Buchhaltung", "Finanzen", "Globale Banken"]
+      },
+      "hso": {
+        "company": "HSO, Zürich, Rapperswil & Baar",
+        "role": "Dozent",
+        "responsibilities": [
+          "Buchhaltung",
+          "Investition",
+          "EMBA, Geschäftsinnovation, Finanzen und Risiko"
+        ]
+      },
+      "insuranceAcademy": {
+        "company": "THE Insurance Academy, Freienbach",
+        "role": "Gründer",
+        "responsibilities": []
+      },
+      "ffhs": {
+        "company": "Fernfachhochschule Schweiz, Zürich (FFHS)",
+        "role": "Dozent",
+        "responsibilities": [
+          "Controlling",
+          "Kapitalmärkte",
+          "Portfoliomanagement",
+          "Nachhaltige Finanzen"
+        ]
+      },
+      "ffhs-2": {
+        "company": "Fernfachhochschule Schweiz, Zürich (FFHS)",
+        "role": "Abteilungsleiter",
+        "responsibilities": ["Finanzen und Führung", "Banking und Finanzen"]
+      }
+    }
+  },
+  "others": {
+    "professional": "Professionell",
+    "lecture": "Dozent",
+    "see-details": "Details anzeigen",
+    "hide-details": "Details ausblenden",
+    "download": "CV herunterladen"
   }
 }
