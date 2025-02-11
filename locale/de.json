@@ -4,7 +4,6 @@
     "about": "Über uns",
     "services": "Dienstleistungen",
     "experience": "Erfahrung",
-    "education": "Ausbildung",
     "publications": "Publikationen",
     "cv": "Lebenslauf",
     "contact": "Kontakt"
@@ -237,8 +236,10 @@
   "others": {
     "professional": "Professionell",
     "lecture": "Dozent",
+    "education": "Ausbildung",
     "see-details": "Details anzeigen",
     "hide-details": "Details ausblenden",
-    "download": "CV herunterladen"
+    "download": "CV herunterladen",
+    "quote": "Reichtum basiert auf klugen Entscheidungen – beginnen Sie noch heute damit, Ihre zu treffen."
   }
 }

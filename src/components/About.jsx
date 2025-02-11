@@ -16,7 +16,6 @@ import { useTranslations } from 'next-intl'
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
 import Image from 'next/image'
 import Andreas from '../assets/andreas-2.jpeg'
-import EducationTree from './Education'
 
 const AboutUsSection = () => {
   const t = useTranslations('about-us')

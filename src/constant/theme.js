@@ -24,6 +24,41 @@ const theme = createTheme({
         fontSize: '32px',
       },
     },
+    h3: {
+      [themeDefault.breakpoints.down('sm')]: {
+        fontSize: '24px',
+      },
+    },
+    h4: {
+      [themeDefault.breakpoints.down('sm')]: {
+        fontSize: '16px',
+      },
+    },
+    h5: {
+      [themeDefault.breakpoints.down('sm')]: {
+        fontSize: '14px',
+      },
+    },
+    h6: {
+      [themeDefault.breakpoints.down('sm')]: {
+        fontSize: '14px',
+      },
+    },
+    body2: {
+      [themeDefault.breakpoints.down('sm')]: {
+        fontSize: '12px',
+      },
+    },
+    p: {
+      [themeDefault.breakpoints.down('sm')]: {
+        fontSize: '10px',
+      },
+    },
+    span: {
+      [themeDefault.breakpoints.down('sm')]: {
+        fontSize: '8px',
+      },
+    },
   },
   components: {
     MuiAppBar: {

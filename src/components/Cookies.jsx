@@ -44,7 +44,12 @@ const ScrollTop = ({ children }) => {
       <Box
         onClick={handleClick}
         role='presentation'
-        sx={{ position: 'fixed', bottom: 32, right: 32, zIndex: 1000 }}
+        sx={{
+          position: 'fixed',
+          bottom: 0,
+          right: 0,
+          zIndex: 1000,
+        }}
       >
         {children}
       </Box>
@@ -56,6 +61,30 @@ const CookiesAndScroll = () => {
   const [open, setOpen] = useState(false)
   const [showDetails, setShowDetails] = useState(false)
   const [preferences, setPreferences] = useState(COOKIE_PREFERENCES)
+  const [activeSection, setActiveSection] = useState('home')
+
+  useEffect(() => {
+    const sections = document.querySelectorAll('section')
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0,
+    }
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          setActiveSection(entry.target.id)
+        }
+      })
+    }, observerOptions)
+
+    sections.forEach(section => observer.observe(section))
+
+    return () => {
+      sections.forEach(section => observer.unobserve(section))
+    }
+  }, [])
 
   useEffect(() => {
     const savedPreferences = localStorage.getItem('cookiePreferences')
@@ -159,10 +188,22 @@ const CookiesAndScroll = () => {
             </FormGroup>
           </Collapse>
         </DialogContent>
-        <DialogActions sx={{ p: 3, pt: 0 }}>
+        <Box
+          sx={{
+            p: 3,
+            pt: 0,
+            display: 'flex',
+            justifyContent: 'end',
+            flexDirection: { xs: 'column', sm: 'row' },
+            gap: 1,
+          }}
+        >
           <Button
             variant='outlined'
             color='ternary'
+            sx={{
+              width: { xs: '100%', sm: 'fit-content' },
+            }}
             onClick={() => setOpen(false)}
           >
             Decline All
@@ -170,6 +211,10 @@ const CookiesAndScroll = () => {
           <Button
             variant='outlined'
             color='ternary'
+            sx={{
+              width: { xs: '100%', sm: 'fit-content' },
+              margin: { xs: 0, sm: 'inherit' },
+            }}
             onClick={handleSavePreferences}
           >
             Save Preferences
@@ -189,7 +234,7 @@ const CookiesAndScroll = () => {
           >
             Accept All
           </Button>
-        </DialogActions>
+        </Box>
       </Dialog>
 
       {/* Cookie Settings Trigger */}
@@ -204,17 +249,18 @@ const CookiesAndScroll = () => {
           left: 0,
           zIndex: 1000,
           borderRadius: 0,
-          color: 'white',
-          backgroundColor: 'ternary.main',
+          color: activeSection === 'contact' ? '#063970' : 'white',
+          backgroundColor:
+            activeSection === 'contact' ? 'white' : 'ternary.main',
           '&:hover': {
-            backgroundColor: 'white',
-            color: '#063970',
+            backgroundColor:
+              activeSection === 'contact' ? 'ternary.main' : 'white',
+            color: activeSection === 'contact' ? 'white' : '#063970',
           },
         }}
       >
         <CookieSharp />
       </Fab>
-
       {/* Scroll to Top FAB */}
       <ScrollTop>
         <Fab
@@ -223,11 +269,16 @@ const CookiesAndScroll = () => {
           aria-label='scroll back to top'
           sx={{
             boxShadow: 3,
-            backgroundColor: 'ternary.main',
-            color: 'white',
+            borderRadius: 0,
+            width: '40px',
+            height: '40px',
+            backgroundColor:
+              activeSection === 'contact' ? 'white' : 'ternary.main',
+            color: activeSection === 'contact' ? '#063970' : 'white',
             '&:hover': {
-              backgroundColor: 'white',
-              color: '#063970',
+              backgroundColor:
+                activeSection === 'contact' ? 'ternary.main' : 'white',
+              color: activeSection === 'contact' ? 'white' : '#063970',
             },
           }}
         >

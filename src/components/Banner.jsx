@@ -47,12 +47,14 @@ function Banner() {
             sx={{
               display: 'flex',
               alignItems: 'center',
+              justifyContent: { xs: 'center', sm: 'start' },
             }}
           >
             <Box
               sx={{
                 display: 'flex',
                 flexDirection: 'column',
+                textAlign: { xs: 'center', sm: 'left' },
                 gap: 1,
               }}
             >
@@ -91,6 +93,7 @@ function Banner() {
                   color: 'common.white',
                   px: 4,
                   mt: 4,
+                  mx: { xs: 'auto', sm: 'unset' },
                 }}
                 onClick={handleScrollToSection}
               >
@@ -101,9 +104,10 @@ function Banner() {
           <Grid2 size={{ xs: 12, md: 7 }}>
             <Box
               sx={{
+                mt: { xs: 4, sm: 0 },
                 position: 'relative',
                 display: 'flex',
-                justifyContent: 'right',
+                justifyContent: { xs: 'center', sm: 'right' },
               }}
             >
               <motion.div
@@ -142,6 +146,8 @@ function Banner() {
                   zIndex: 1,
                   float: 'right',
                   marginRight: isSmallScreen ? '-5vw' : 0,
+                  width: isSmallScreen && '100vw',
+                  height: isSmallScreen && 'auto',
                 }}
               />
             </Box>

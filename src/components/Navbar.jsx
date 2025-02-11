@@ -37,6 +37,55 @@ export default function Navbar() {
   const theme = useTheme()
   const isMobile = useMediaQuery(theme.breakpoints.down('md'))
 
+  const drawerVariants = {
+    hidden: {
+      x: '100%',
+      opacity: 0,
+      transition: {
+        type: 'tween',
+        duration: 0.4,
+        ease: [0.4, 0, 0.2, 1], // Material Design easing
+        when: 'afterChildren',
+      },
+    },
+    visible: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        type: 'tween',
+        duration: 0.5,
+        ease: [0.4, 0, 0.2, 1],
+        when: 'beforeChildren',
+        staggerChildren: 0.05,
+      },
+    },
+  }
+
+  const listItemVariants = {
+    hidden: {
+      x: 20,
+      opacity: 0,
+    },
+    visible: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        type: 'tween',
+        duration: 0.4,
+        ease: 'easeOut',
+      },
+    },
+  }
+
+  const sections = [
+    'home',
+    'about',
+    'services',
+    'experience',
+    'publications',
+    'contact',
+  ]
+
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 50) {
@@ -109,62 +158,71 @@ export default function Navbar() {
 
   // Drawer content with Framer Motion animations
   const drawerContent = (
-    <motion.div
-      initial={{ x: '100%', opacity: 0 }}
-      animate={{ x: 0, opacity: 1 }}
-      exit={{ x: '100%', opacity: 0 }}
-      transition={{ type: 'spring', stiffness: 300, damping: 30 }}
-      style={{
-        width: 250,
-        height: '100%',
-        backgroundColor: 'common.white',
-        padding: '16px',
-        overflow: 'hidden',
-      }}
-    >
-      <IconButton
-        onClick={toggleDrawer(false)}
-        sx={{ position: 'absolute', right: 8, top: 8 }}
+    <AnimatePresence>
+      <motion.div
+        initial='hidden'
+        animate='visible'
+        exit='hidden'
+        variants={drawerVariants}
+        style={{
+          width: 250,
+          height: '100%',
+          padding: '16px',
+          position: 'relative',
+          overflow: 'hidden',
+        }}
       >
-        <CloseIcon sx={{ color: '#063970' }} />
-      </IconButton>
-      <List>
-        {[
-          'home',
-          'about',
-          'services',
-          'experience',
-          'education',
-          'publications',
-          'contact',
-        ].map((section, index) => (
-          <motion.div
-            key={section}
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: index * 0.1, type: 'spring', stiffness: 300 }}
-          >
-            <ListItem
-              button
-              onClick={() => handleScrollToSection(section)}
-              sx={{
-                '&:hover': {
-                  backgroundColor: '#06397010',
-                },
-              }}
+        <IconButton
+          onClick={toggleDrawer(false)}
+          sx={{
+            position: 'absolute',
+            right: 8,
+            top: 8,
+            transition: 'transform 0.2s ease',
+            '&:hover': {
+              transform: 'rotate(90deg)',
+            },
+          }}
+        >
+          <CloseIcon sx={{ color: '#063970' }} />
+        </IconButton>
+
+        <List sx={{ mt: 3, overflow: 'hidden' }}>
+          {sections.map((section, index) => (
+            <motion.div
+              key={section}
+              variants={listItemVariants}
+              style={{ overflow: 'hidden' }}
             >
-              <ListItemText
-                primary={t(`${section}`)}
+              <ListItem
+                onClick={() => handleScrollToSection(section)}
                 sx={{
-                  color: activeSection === section ? '#063970' : 'text.primary',
-                  fontWeight: activeSection === section ? 'bold' : 'normal',
+                  borderRadius: 1,
+                  mb: 0.5,
+                  transition: 'all 0.3s ease',
+                  '&:hover': {
+                    backgroundColor: '#06397015',
+                    transform: 'translateX(5px)',
+                  },
                 }}
-              />
-            </ListItem>
-          </motion.div>
-        ))}
-      </List>
-    </motion.div>
+              >
+                <ListItemText
+                  primary={t(`${section}`)}
+                  sx={{
+                    '& .MuiTypography-root': {
+                      color:
+                        activeSection === section ? '#063970' : 'text.primary',
+                      fontWeight: activeSection === section ? 600 : 400,
+                      transition: 'all 0.3s ease',
+                    },
+                  }}
+                />
+              </ListItem>
+            </motion.div>
+          ))}
+        </List>
+      </motion.div>
+    </AnimatePresence>
   )
 
   return (
@@ -194,9 +252,11 @@ export default function Navbar() {
               height={0}
               sizes='100vw'
               style={{
-                width: '80px',
+                width: isMobile ? '50px' : '80px',
                 height: 'auto',
                 padding: '16px 0px',
+                // opacity: isMobile && !(scrolled || isTop) ? 0 : 1,
+                // transition: 'opacity 0.3s ease-in-out',
               }}
             />
             {isMobile ? (
@@ -281,15 +341,7 @@ export default function Navbar() {
               </Box>
             ) : (
               <Stack direction='row' spacing={3} alignItems='center'>
-                {[
-                  'home',
-                  'about',
-                  'services',
-                  'experience',
-                  'education',
-                  'publications',
-                  'contact',
-                ].map(section => (
+                {sections.map(section => (
                   <Typography
                     key={section}
                     onClick={() => handleScrollToSection(section)}
@@ -388,23 +440,18 @@ export default function Navbar() {
       </Toolbar>
 
       {/* Drawer with Framer Motion animations */}
-      <AnimatePresence>
-        {drawerOpen && (
-          <Drawer
-            anchor='right'
-            open={drawerOpen}
-            onClose={toggleDrawer(false)}
-            sx={{
-              '& .MuiDrawer-paper': {
-                backgroundColor: 'common.white',
-              },
-              overflow: 'hidden',
-            }}
-          >
-            {drawerContent}
-          </Drawer>
-        )}
-      </AnimatePresence>
+      {drawerOpen && (
+        <Drawer
+          anchor='right'
+          open={drawerOpen}
+          onClose={toggleDrawer(false)}
+          sx={{
+            overflow: 'hidden',
+          }}
+        >
+          {drawerContent}
+        </Drawer>
+      )}
     </AppBar>
   )
 }

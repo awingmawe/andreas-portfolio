@@ -70,7 +70,9 @@ a {
 .publicationsSwiper .swiper-button-prev {
   color: #063970;
 }
-
+.swiper-pagination-bullet-active {
+  background: #063970 !important;
+}
 .swiper-grid-column > .swiper-wrapper {
   flex-direction: row;
 }

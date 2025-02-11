@@ -4,7 +4,6 @@
     "about": "About",
     "services": "Services",
     "experience": "Experience",
-    "education": "Education",
     "publications": "Publications",
     "cv": "CV",
     "contact": "Contact"
@@ -237,8 +236,10 @@
   "others": {
     "professional": "Professional",
     "lecture": "Lecturer",
+    "education": "Education",
     "see-details": "See Details",
     "hide-details": "Hide Details",
-    "download": "Download CV"
+    "download": "Download CV",
+    "quote": "Wealth is built on smart choices—start making yours today."
   }
 }

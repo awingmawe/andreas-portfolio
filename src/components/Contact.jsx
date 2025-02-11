@@ -47,9 +47,9 @@ const CustomTextField = styled(TextField)(({ theme }) => ({
   },
 }))
 
-const MotionBox = motion(Box)
-const MotionPaper = motion(Paper)
-const MotionButton = motion(Button)
+const MotionBox = motion.create(Box)
+const MotionPaper = motion.create(Paper)
+const MotionButton = motion.create(Button)
 
 const ContactMe = () => {
   const t = useTranslations('contact')
@@ -309,13 +309,14 @@ const ContactMe = () => {
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                         sx={{
-                          mt: 2,
+                          mt: 1,
                           bgcolor: 'ternary.main',
                           color: 'common.white',
                           '&:hover': {
                             bgcolor: 'ternary.main',
                             opacity: 0.9,
                           },
+                          width: { xs: '100%', sm: 'fit-content' },
                         }}
                       >
                         {t('form.submit')}

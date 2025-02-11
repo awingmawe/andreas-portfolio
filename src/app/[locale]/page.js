@@ -7,6 +7,7 @@ import CertificateSection from '../../components/Achievement'
 import ExperienceTimeline from '../../components/Experience'
 import Publication from '../../components/Publication'
 import ContactMe from '../../components/Contact'
+import AnimatedQuote from '../../components/Quote'
 
 export async function generateMetadata() {
   return {
@@ -18,8 +19,9 @@ export default async function Page() {
   return (
     <Fragment>
       <Banner />
-      <CertificateSection />
+      <AnimatedQuote />
       <AboutUs />
+      <CertificateSection />
       <ServicesCard />
       <ExperienceTimeline />
       <Publication />

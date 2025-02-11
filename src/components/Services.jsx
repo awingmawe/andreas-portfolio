@@ -45,7 +45,7 @@ export default function ServicesCard() {
     <Box
       component='section'
       sx={{
-        backgroundColor: '#fefefe',
+        backgroundColor: '#e2ecf6',
         backgroundImage:
           'url("https://www.transparenttextures.com/patterns/otis-redding.png")',
         py: 5,

@@ -61,7 +61,6 @@ const PublicationCard = ({ title, published, keywords, link, index }) => {
   const linkVariants = {
     hover: {
       scale: 1.05,
-      x: 5,
       transition: {
         duration: 0.2,
         ease: 'easeInOut',
@@ -261,7 +260,7 @@ const Publications = () => {
       component='section'
       id='publications'
       sx={{
-        backgroundColor: '#fefefe',
+        backgroundColor: '#e2ecf6',
         backgroundImage:
           'url("https://www.transparenttextures.com/patterns/otis-redding.png")',
         py: 5,
