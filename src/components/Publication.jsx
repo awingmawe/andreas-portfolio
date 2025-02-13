@@ -264,6 +264,21 @@ const Publications = () => {
         backgroundImage:
           'url("https://www.transparenttextures.com/patterns/otis-redding.png")',
         py: 5,
+        '& .swiper-button-prev, & .swiper-button-next': {
+          color: '#063970',
+          '&::after': {
+            fontSize: '20px',
+          },
+          zIndex: 10, // Increase z-index to appear above cards
+        },
+        '& .swiper-button-prev': {
+          left: { xs: '10px', md: '0px' },
+          top: '47%',
+        },
+        '& .swiper-button-next': {
+          right: { xs: '10px', md: '0px' },
+          top: '47%',
+        },
       }}
     >
       <Container maxWidth='lg'>

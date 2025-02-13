@@ -104,19 +104,9 @@ const ExperienceStepper = () => {
 
   const education = [
     {
-      university: HWZ,
-      date: '08.1996 - 10.2000',
-      degree: 'Betriebsökonom HWV',
-    },
-    {
-      university: Southern,
-      date: '09.2002 - 10.2004',
-      degree: 'Master of Business Administration',
-    },
-    {
-      university: Liverpool,
-      date: '08.2010 - 10.2017',
-      degree: 'Doctor of Business Administration',
+      university: Zurich,
+      date: '09.2018 - 09.2020',
+      degree: 'LL.M. UZH International Business Law',
     },
     {
       university: London,
@@ -124,9 +114,19 @@ const ExperienceStepper = () => {
       degree: 'Master of Science Professional Accountancy',
     },
     {
-      university: Zurich,
-      date: '09.2018 - 09.2020',
-      degree: 'LL.M. UZH International Business Law',
+      university: Liverpool,
+      date: '08.2010 - 10.2017',
+      degree: 'Doctor of Business Administration',
+    },
+    {
+      university: Southern,
+      date: '09.2002 - 10.2004',
+      degree: 'Master of Business Administration',
+    },
+    {
+      university: HWZ,
+      date: '08.1996 - 10.2000',
+      degree: 'Betriebsökonom HWV',
     },
   ]
 
