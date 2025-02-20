@@ -116,14 +116,16 @@ const ContactMe = () => {
   }
 
   const contactInfo = [
-    { icon: <Email />, text: 'email@example.com' },
-    { icon: <Phone />, text: '+1 234 567 890' },
-    { icon: <LocationOn />, text: 'City, Country' },
+    { icon: <Email />, text: 'info@visiongoal.ch' },
+    { icon: <Phone />, text: '+41 (0)78 728 09 33' },
+    { icon: <LocationOn />, text: 'Lachen, Schwyz' },
   ]
 
   const socialLinks = [
-    { icon: <LinkedIn />, label: 'LinkedIn' },
-    { icon: <GitHub />, label: 'GitHub' },
+    {
+      icon: <LinkedIn />,
+      label: 'https://www.linkedin.com/company/visiongoal/about/',
+    },
   ]
 
   return (
