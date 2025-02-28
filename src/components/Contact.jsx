@@ -117,14 +117,15 @@ const ContactMe = () => {
 
   const contactInfo = [
     { icon: <Email />, text: 'info@visiongoal.ch' },
-    { icon: <Phone />, text: '+41 (0)78 728 09 33' },
-    { icon: <LocationOn />, text: 'Lachen, Schwyz' },
+    { icon: <Phone />, text: '+41 78 728 09 33' },
+    { icon: <LocationOn />, text: 'Pfäffikon SZ, Switzerland' },
   ]
 
   const socialLinks = [
     {
       icon: <LinkedIn />,
-      label: 'https://www.linkedin.com/company/visiongoal/about/',
+      link: 'https://www.linkedin.com/company/visiongoal/about/',
+      label: 'LinkedIn',
     },
   ]
 
@@ -235,6 +236,7 @@ const ContactMe = () => {
                               backgroundColor: 'rgba(6, 57, 112, 0.04)',
                             },
                           }}
+                          onClick={() => (window.location.href = social.link)}
                         >
                           {social.label}
                         </MotionButton>

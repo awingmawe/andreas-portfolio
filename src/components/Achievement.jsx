@@ -7,7 +7,9 @@ import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 import ACCA from '../assets/acca.png'
 import CFP from '../assets/cfp.png'
-import CCC from '../assets/coursera.png'
+import FINS from '../assets/FINS.png'
+import SVEB from '../assets/SVEB.png'
+import SLAM from '../assets/SLAM.png'
 
 const CertificateSection = () => {
   const t = useTranslations('certificate')
@@ -28,15 +30,15 @@ const CertificateSection = () => {
     },
     {
       index: 3,
-      image: ACCA,
+      image: SLAM,
     },
     {
       index: 4,
-      image: CCC,
+      image: FINS,
     },
     {
       index: 5,
-      image: CCC,
+      image: SVEB,
     },
     {
       index: 2,

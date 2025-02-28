@@ -17,7 +17,7 @@
     "hello": "Sag Hallo"
   },
   "about-us": {
-    "title": "Über Andreas",
+    "title": "Über mich",
     "header": "Finanztraining und Bildung - Mentoring und Coaching",
     "intro": "Hallo, ich bin Andreas Svoboda, Gründer von Vision Goal LLC (gegründet 2022). Mit umfassender Erfahrung in der Finanzbranche konzentriere ich mich auf Coaching, Mentoring und Lehre, um Einzelpersonen und Organisationen zu stärken.",
     "teaching": {
@@ -78,16 +78,16 @@
       "description": "Gilt als Goldstandard für Finanzplanungsexperten. Es ist unerlässlich für Karrieren in den Bereichen persönliche Finanzen, Vermögensverwaltung und Altersvorsorge."
     },
     "3": {
-      "title": "Zertifikat in Datenanalyse: Think Ahead ACCA",
-      "description": "Da Datenanalysen in allen Branchen immer wichtiger werden, entspricht diese Zertifizierung dem wachsenden Bedarf an datengesteuerter Entscheidungsfindung im Finanzwesen und darüber hinaus."
+      "title": "Schweizer lizenzierter Vermögensverwalter",
+      "description": "Ich entwickle strukturierte Anlagestrategien, die die Rendite maximieren und gleichzeitig die Risiken managen. Durch die Analyse von Markttrends und Finanzdaten helfe ich meinen Kunden, fundierte Entscheidungen zu treffen und sicherzustellen, dass ihre Portfolios stark bleiben und sich an wirtschaftliche Veränderungen anpassen können."
     },
     "4": {
-      "title": "Beherrschung der Datenanalyse in Excel von der Duke University (CCC)",
-      "description": "Excel bleibt ein wichtiges Werkzeug im Finanz-, Rechnungswesen- und Geschäftswesen. Diese von der Duke University angebotene Zertifizierung gewährleistet fundierte Grundkenntnisse in der effektiven Datenanalyse."
+      "title": "FINMA-lizensierter Versicherungsbroker",
+      "description": "Ich biete unabhängige, regulierte Versicherungslösungen an, die Unternehmen und Privatpersonen vor unvorhergesehenen finanziellen Risiken schützen. Meine umfassenden Kenntnisse der Versicherungslandschaft stellen sicher, dass meine Kunden die effektivsten Policen erhalten, die ihren spezifischen Bedürfnissen entsprechen."
     },
     "5": {
-      "title": "Anlageverwaltung durch HEC Paris und AXA Investment Managers (CCC)",
-      "description": "Eine Zertifizierung, die akademische Exzellenz mit Branchenexpertise verbindet und sich auf moderne Investmentmanagementpraktiken konzentriert, die in der Vermögensverwaltung sehr gefragt sind."
+      "title": "SVEB Zertifikat Modul 1",
+      "description": "Ich verfüge über umfassende Kenntnisse im Bereich Finanzbildung und -coaching und vermittle meinen Kunden praktisches Wissen, damit sie fundierte Finanzentscheidungen treffen können. Ich biete Workshops, Schulungen und Einzelberatungen an, um Klarheit und Vertrauen in die Finanzverwaltung zu schaffen."
     }
   },
   "contact": {

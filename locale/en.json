@@ -26,7 +26,7 @@
     },
     "career": {
       "title": "Professional Career",
-      "text": "I have held leadership roles at Bank Julius Bär & Co. AG, Liechtenstein Insurance Association, and Wealth Assurance AG, gaining expertise in wealth planning, strategy, and risk management."
+      "text": "I have held leadership roles at Bank Julius Bär & Co AG, UBS AG and Liechtenstein Insurance Association, gaining expertise in wealth planning, strategy, and risk management."
     },
     "education": {
       "title": "Education and Teaching Experience",
@@ -56,7 +56,7 @@
     "leadership": {
       "title": "Leadership and Career Mentoring",
       "desc": "Guidance for aspiring professionals to develop leadership, strategic thinking, and career planning skills.",
-      "long-text": "With my experience as a board member, management director, and head of departments, I will guide aspiring professionals and emerging leaders in developing their leadership skills, strategic thinking, and decision-making abilities. Through one-on-one mentoring sessions, you will get career guidance, help to navigate challenges, and assistance in setting achievable goals for personal and professional growth"
+      "long-text": "With my experience as a board member, managing diretor and head of departments, I will guide aspiring professionals and emerging leaders in developing their leadership skills, strategic thinking, and decision-making abilities. Through one-on-one mentoring sessions, you will get career guidance, help to navigate challenges, and assistance in setting achievable goals for personal and professional growth"
     },
     "mentoring": {
       "title": "Mentoring for Students",
@@ -78,16 +78,16 @@
       "description": "Regarded as a gold standard for financial planning professionals. It is essential for careers in personal finance, wealth management, and retirement planning."
     },
     "3": {
-      "title": "Certificate in Data Analytics: Think Ahead ACCA",
-      "description": "With data analytics becoming crucial across industries, this certification aligns with the growing need for data-driven decision-making in finance and beyond."
+      "title": "Swiss Licensed Asset Manager",
+      "description": "Developing structured investment strategies that maximize returns while managing risks. By analyzing market trends and financial data, I help clients make informed decisions, ensuring their portfolios remain strong and adaptable to economic changes."
     },
     "4": {
-      "title": "Mastering Data Analysis in Excel by Duke University (CCC)",
-      "description": "Excel remains a vital tool in finance, accounting, and business. This certification, offered by Duke University, ensures strong foundational knowledge in analyzing data effectively."
+      "title": "FINMA-Licensed Insurance Broker",
+      "description": "Offering independent, regulated insurance solutions that protect businesses and individuals from unforeseen financial risks. My deep understanding of the insurance landscape ensures clients receive the most effective policies suited to their specific needs."
     },
     "5": {
-      "title": "Investment Management by HEC Paris and AXA Investment Managers (CCC)",
-      "description": "A certification that merges academic excellence with industry expertise, focusing on modern investment management practices, highly sought after in asset management."
+      "title": "SVEB Zertifikate Modul 1",
+      "description": "Qualified in financial education and coaching, empowering clients with practical knowledge to make informed financial decisions. I provide workshops, training sessions, and one-on-one consultations to ensure clarity and confidence in financial management."
     }
   },
   "contact": {
