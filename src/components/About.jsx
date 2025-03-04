@@ -191,6 +191,40 @@ const AboutUsSection = () => {
                     {t('intro')}
                   </Typography>
                 </motion.div>
+                <motion.div
+                  variants={containerVariants}
+                  initial='hidden'
+                  whileInView='visible'
+                  viewport={{ once: false }}
+                >
+                  <Typography
+                    variant='body1'
+                    sx={{
+                      textAlign: 'left',
+                      mt: 2,
+                    }}
+                    color='text.secondary'
+                  >
+                    {t('intro-2')}
+                  </Typography>
+                </motion.div>
+                <motion.div
+                  variants={containerVariants}
+                  initial='hidden'
+                  whileInView='visible'
+                  viewport={{ once: false }}
+                >
+                  <Typography
+                    variant='body1'
+                    sx={{
+                      textAlign: 'left',
+                      my: 2,
+                    }}
+                    color='text.secondary'
+                  >
+                    {t('intro-3')}
+                  </Typography>
+                </motion.div>
               </Box>
               <motion.div
                 variants={containerVariants}

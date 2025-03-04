@@ -12,6 +12,9 @@ import {
   IconButton,
   styled,
   Grid2,
+  Snackbar,
+  Alert,
+  CircularProgress,
 } from '@mui/material'
 import {
   Email,
@@ -60,6 +63,14 @@ const ContactMe = () => {
     message: '',
   })
 
+  // Add states for form submission handling
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [snackbar, setSnackbar] = useState({
+    open: false,
+    message: '',
+    severity: 'success',
+  })
+
   // Refs for scroll animation
   const infoRef = useRef(null)
   const formRef = useRef(null)
@@ -74,8 +85,53 @@ const ContactMe = () => {
     }))
   }
 
-  const handleSubmit = e => {
+  const handleSubmit = async e => {
     e.preventDefault()
+
+    try {
+      setIsSubmitting(true)
+
+      const response = await fetch('/api/send', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      })
+
+      const data = await response.json()
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Failed to send message')
+      }
+
+      // Reset form on success
+      setFormData({
+        name: '',
+        email: '',
+        subject: '',
+        message: '',
+      })
+
+      setSnackbar({
+        open: true,
+        message: t('form.success'),
+        severity: 'success',
+      })
+    } catch (error) {
+      console.error('Error sending message:', error)
+      setSnackbar({
+        open: true,
+        message: error.message || t('form.error'),
+        severity: 'error',
+      })
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
+
+  const handleCloseSnackbar = () => {
+    setSnackbar(prev => ({ ...prev, open: false }))
   }
 
   const slideInLeftVariants = {
@@ -299,6 +355,7 @@ const ContactMe = () => {
                           value={formData[field.name]}
                           onChange={handleChange}
                           required
+                          disabled={isSubmitting}
                         />
                       </motion.div>
                     </Grid2>
@@ -309,9 +366,10 @@ const ContactMe = () => {
                         variant='contained'
                         size='large'
                         type='submit'
-                        endIcon={<Send />}
+                        endIcon={isSubmitting ? null : <Send />}
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
+                        disabled={isSubmitting}
                         sx={{
                           mt: 1,
                           bgcolor: 'ternary.main',
@@ -323,7 +381,18 @@ const ContactMe = () => {
                           width: { xs: '100%', sm: 'fit-content' },
                         }}
                       >
-                        {t('form.submit')}
+                        {isSubmitting ? (
+                          <Box sx={{ display: 'flex', alignItems: 'center' }}>
+                            <CircularProgress
+                              size={24}
+                              color='inherit'
+                              sx={{ mr: 1 }}
+                            />
+                            {t('form.sending')}
+                          </Box>
+                        ) : (
+                          t('form.submit')
+                        )}
                       </MotionButton>
                     </motion.div>
                   </Grid2>
@@ -333,6 +402,22 @@ const ContactMe = () => {
           </Grid2>
         </Grid2>
       </Container>
+
+      {/* Notification */}
+      <Snackbar
+        open={snackbar.open}
+        autoHideDuration={6000}
+        onClose={handleCloseSnackbar}
+        anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
+      >
+        <Alert
+          onClose={handleCloseSnackbar}
+          severity={snackbar.severity}
+          sx={{ width: '100%' }}
+        >
+          {snackbar.message}
+        </Alert>
+      </Snackbar>
     </Box>
   )
 }

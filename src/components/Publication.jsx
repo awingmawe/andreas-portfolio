@@ -21,9 +21,9 @@ import 'swiper/css/pagination'
 import 'swiper/css/navigation'
 import { useTranslations } from 'next-intl'
 
-const MotionCard = motion(Card)
-const MotionTypography = motion(Typography)
-const MotionBox = motion(Box)
+const MotionCard = motion.create(Card)
+const MotionTypography = motion.create(Typography)
+const MotionBox = motion.create(Box)
 
 const PublicationCard = ({ title, published, keywords, link, index }) => {
   const cardVariants = {

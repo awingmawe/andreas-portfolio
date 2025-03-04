@@ -19,7 +19,9 @@
   "about-us": {
     "title": "Über mich",
     "header": "Finanztraining und Bildung - Mentoring und Coaching",
-    "intro": "Hallo, ich bin Andreas Svoboda, Gründer von Vision Goal LLC (gegründet 2022). Mit umfassender Erfahrung in der Finanzbranche konzentriere ich mich auf Coaching, Mentoring und Lehre, um Einzelpersonen und Organisationen zu stärken.",
+    "intro": "Hallo, ich bin Andreas Svoboda – ein Mentor, Coach und Finanzexperte, der sich dafür einsetzt, Einzelpersonen und Organisationen zum Erfolg zu verhelfen. Ich habe Vision Goal LLC im Jahr 2022 gegründet, um Fachleute zu unterstützen.",
+    "intro-2": "Über Vision Goal LLC bieten wir strategische Beratung an, um Kunden dabei zu helfen, finanziellen Erfolg zu erzielen, das Vermögensmanagement zu optimieren und ihre Geschäftsziele zu erreichen.",
+    "intro-3": "Lassen Sie uns Kontakte knüpfen und gemeinsam Erfolge erzielen!",
     "teaching": {
       "title": "Lehre und Vorträge",
       "text": "Ich unterrichte an der UIBS in Zürich und Genf in den Bereichen Rechnungswesen, Finanzen und globales Banking und leite Finanzprogramme an der FFHS. Zudem trage ich zum EMBA-Programm der HSO bei und unterstütze Fachleute in ihrer beruflichen Weiterentwicklung."
@@ -127,12 +129,37 @@
         "placeholder": "Geben Sie Ihre Nachricht ein",
         "error": "Bitte geben Sie Ihre Nachricht ein"
       },
-      "submit": "Nachricht senden"
+      "submit": "Nachricht senden",
+      "sending": "Wird gesendet...",
+      "success": "Nachricht erfolgreich gesendet! Wir werden uns in Kürze bei Ihnen melden.",
+      "error": "Nachricht konnte nicht gesendet werden. Bitte versuchen Sie es später erneut."
     }
   },
   "experience": {
     "title": "Erfahrung",
     "professional": {
+      "gmbh": {
+        "company": "S&L Management und Consulting GmbH",
+        "role": "Versicherungsmakler",
+        "responsibilities": [
+          "Maßgeschneiderte Versicherungsstrategien für Kunden entwickeln.",
+          "Kunden durch komplexe Risikolandschaften führen, um finanzielle Sicherheit zu gewährleisten.",
+          "Fachkundige Beratung zur Unterstützung des Unternehmenswachstums bieten.",
+          "Individuelle Lösungen entsprechend den spezifischen Zielen der Kunden entwickeln.",
+          "Tiefgehendes Branchenwissen und innovative Strategien für optimale Ergebnisse nutzen.",
+          "Langfristige Partnerschaften aufbauen und Kunden bei fundierten Entscheidungen unterstützen."
+        ]
+      },
+      "qWealth": {
+        "company": "Q WEALTH AG, Zürich, Schweiz",
+        "role": "Partner",
+        "responsibilities": [
+          "Finanzexperte bei Q WEALTH AG, einem in der Schweiz lizenzierten Vermögensverwalter.",
+          "Individuelle Vermögensverwaltung und Finanzberatung für Ultra-High-Net-Worth Individuals (UHNWI).",
+          "Personalisierte Strategien zur Vermögenserhaltung und -vermehrung entwickeln.",
+          "Kunden dabei unterstützen, die Komplexität der Vermögensverwaltung zu meistern und langfristigen Wohlstand zu sichern."
+        ]
+      },
       "bankJuliusBaer": {
         "company": "Bank Julius Bär & Co. AG, Schweiz/Singapur",
         "role": "Leiter Wealth Planning (WP) Life & Pension",
@@ -192,6 +219,20 @@
       }
     },
     "lecture": {
+      "sbs": {
+        "company": "SBS Swiss Business School",
+        "role": "Dozent – Teilzeit",
+        "responsibilities": ["Hochschulbildung", "Ausbildung & Coaching"]
+      },
+      "ssib": {
+        "company": "Swiss School for International Business",
+        "role": "Dozent – Teilzeit",
+        "responsibilities": [
+          "Hochschulbildung",
+          "Ausbildung & Coaching",
+          "Lehre in der Hochschulbildung"
+        ]
+      },
       "visionGoal": {
         "company": "Vision Goal LLC. Lachen",
         "role": "Gründer",

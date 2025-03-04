@@ -19,7 +19,9 @@
   "about-us": {
     "title": "About Andreas",
     "header": "Financial Training and Education - Mentorship and Coaching",
-    "intro": "Hello, I’m Andreas Svoboda, founder of Vision Goal LLC (est. 2022). With extensive experience in finance, I focus on coaching, mentoring, and teaching to empower individuals and organizations.",
+    "intro": "Hi, I'm Andreas Svoboda—a mentor, coach, and financial expert dedicated to helping individuals and organizations succeed. I founded Vision Goal LLC in 2022 to empower professionals.",
+    "intro-2": "Through Vision Goal LLC, We providing strategic consulting to help clients achieve financial success, optimize wealth management, and reach their business goals",
+    "intro-3": "Let’s connect and drive success together!",
     "teaching": {
       "title": "Teaching and Lecturing",
       "text": "I lecture at UIBS in Zurich and Geneva on accounting, finance, and global banking and lead finance programs at FFHS. I also contribute to HSO’s EMBA program, helping professionals advance their careers."
@@ -127,12 +129,37 @@
         "placeholder": "Enter your message",
         "error": "Please enter your message"
       },
-      "submit": "Send Message"
+      "submit": "Send Message",
+      "sending": "Sending...",
+      "success": "Message sent successfully! We'll get back to you soon.",
+      "error": "Failed to send message. Please try again later."
     }
   },
   "experience": {
     "title": "Experience",
     "professional": {
+      "gmbh": {
+        "company": "S&L Management and Consulting GmbH",
+        "role": "Insurance Broker",
+        "responsibilities": [
+          "Provide tailored insurance strategies to meet client needs.",
+          "Guide clients through complex risk landscapes for financial security.",
+          "Offer expert consulting to support organizational growth.",
+          "Develop customized solutions aligned with individual goals.",
+          "Leverage deep knowledge and innovative strategies for optimal results.",
+          "Build trust and ensure clients have clarity and control over decisions."
+        ]
+      },
+      "qWealth": {
+        "company": "Q WEALTH AG, Zurich, Switzerland",
+        "role": "Partner",
+        "responsibilities": [
+          "Financial expert at Q WEALTH AG, a Swiss Licensed Asset Manager.",
+          "Bespoke asset management & financial advisory for Ultra-High-Net-Worth Individuals (UHNWI)",
+          "Crafting personalized strategies to preserve & grow wealth.",
+          "Helping clients navigate wealth management complexities & secure long-term prosperity."
+        ]
+      },
       "bankJuliusBaer": {
         "company": "Bank Julius Bär & Co. AG, Switzerland/Singapore",
         "role": "Head of Wealth Planning (WP) Life & Pension",
@@ -192,6 +219,23 @@
       }
     },
     "lecture": {
+      "sbs": {
+        "company": "SBS Swiss Business School",
+        "role": "Lecturer - Part Time",
+        "responsibilities": [
+          "Higher Education",
+          "Educational Training & Coaching"
+        ]
+      },
+      "ssib": {
+        "company": "Swiss School for International Business",
+        "role": "Lecturer - Part Time",
+        "responsibilities": [
+          "Higher Education",
+          "Educational Training & Coaching",
+          "Higher Education Teaching"
+        ]
+      },
       "visionGoal": {
         "company": "Vision Goal LLC. Lachen",
         "role": "Founder",
