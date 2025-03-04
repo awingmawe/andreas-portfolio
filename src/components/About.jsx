@@ -106,7 +106,7 @@ const AboutUsSection = () => {
         <Grid2
           container
           spacing={{ xs: 2, md: 4 }}
-          alignItems='stretch'
+          alignItems='center'
           mt={{ xs: 2, md: 5 }}
         >
           <Grid2 size={{ xs: 12, md: 4 }}>
