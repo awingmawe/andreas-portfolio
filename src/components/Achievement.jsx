@@ -9,7 +9,6 @@ import ACCA from '../assets/acca.png'
 import CFP from '../assets/cfp.png'
 import FINS from '../assets/FINS.png'
 import SVEB from '../assets/SVEB.png'
-import SLAM from '../assets/SLAM.png'
 
 const CertificateSection = () => {
   const t = useTranslations('certificate')
@@ -30,7 +29,7 @@ const CertificateSection = () => {
     },
     {
       index: 3,
-      image: SLAM,
+      image: FINS,
     },
     {
       index: 4,
