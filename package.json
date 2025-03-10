@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "genetate": "next build && next export"
   },
   "dependencies": {
     "@emotion/styled": "^11.14.0",
