@@ -9,9 +9,13 @@ import Publication from '../../components/Publication'
 import ContactMe from '../../components/Contact'
 import AnimatedQuote from '../../components/Quote'
 
-export async function generateMetadata() {
+export async function generateMetadata({ params: { locale } }) {
   return {
-    ...metadata('Andreas Svoboda | Portfolio', `Portfolio`),
+    ...metadata(
+      'Vision Goal LLC',
+      `Financial training and education - Mentorship and coaching`,
+      locale,
+    ),
   }
 }
 

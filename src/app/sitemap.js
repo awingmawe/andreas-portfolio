@@ -1,22 +1,18 @@
 export default function sitemap() {
   const websiteBaseUrl = 'https://visiongoal.ch/'
 
-  // change these value if modify parkee content
-  const route = [
+  return [
     {
-      pathname: '',
+      pathname: `${websiteBaseUrl}/en`,
+      lastModified: new Date(),
+      changeFrequency: 'yearly',
+      priority: 1.0,
+    },
+    {
+      pathname: `${websiteBaseUrl}/de`,
       lastModified: new Date(),
       changeFrequency: 'yearly',
       priority: 1.0,
     },
   ]
-
-  return route.map(r => {
-    return {
-      url: `${websiteBaseUrl}/${r.pathname}`,
-      priority: r.priority,
-      lastModified: r.lastModified,
-      changeFrequency: r.changeFrequency,
-    }
-  })
 }

@@ -1,8 +1,8 @@
-export const metadata = (title, description) => ({
-  metadataBase: new URL('https://visiongoal.ch/'),
+export const metadata = (title, description, locale) => ({
+  metadataBase: new URL(`https://visiongoal.ch/${locale}`),
   title: title,
   description: description,
-  keywords: ['portfolio'],
+  keywords: ['portfolio, vision_goal, finance, financial, accounting'],
   openGraph: {
     title: title,
     description: description,
