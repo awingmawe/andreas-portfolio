@@ -12,8 +12,8 @@ import AnimatedQuote from '../../components/Quote'
 export async function generateMetadata({ params: { locale } }) {
   return {
     ...metadata(
-      'Vision Goal | Fiduciary & Wealth Management in Switzerland',
-      `Vision Goal is a Swiss-based expert in fiduciary services, trust management, wealth structuring, and asset protection. We provide tailored financial solutions for businesses and individuals seeking strategic financial growth and security. Discover our expertise today!`,
+      'Vision Goal | Financial Consulting & Wealth Management in Switzerland',
+      `Vision Goal is a Swiss-based expert in financial consulting, trust management, wealth management & structuring, and asset management & protection. We provide tailored financial solutions for businesses and individuals seeking strategic financial growth and security. Discover our expertise today!`,
       locale,
     ),
   }
