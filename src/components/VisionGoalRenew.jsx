@@ -382,8 +382,9 @@ export default function VisionGoalRenew() {
           alignItems: 'center',
           justifyContent: 'center',
           textAlign: 'center',
-          gap: 'clamp(10px, 2.2vh, 24px)',
-          px: 'clamp(24px, 6vw, 72px)',
+          gap: 'clamp(14px, 3.8vh, 50px)',
+          px: 'clamp(28px, 6.5vw, 88px)',
+          py: 'clamp(8px, 2vh, 28px)',
         }}
       >
         {/* Logo — the real asset, floating over an ice halo */}
@@ -413,7 +414,7 @@ export default function VisionGoalRenew() {
                 priority
                 sizes='140px'
                 style={{
-                  width: 'clamp(88px, 20vmin, 132px)',
+                  width: 'clamp(94px, min(21vmin, 17vh), 150px)',
                   height: 'auto',
                   display: 'block',
                 }}
@@ -445,7 +446,7 @@ export default function VisionGoalRenew() {
             />
             <Typography
               sx={{
-                fontSize: { xs: 11, md: 12 },
+                fontSize: { xs: 11.5, md: 12.5 },
                 letterSpacing: '0.18em',
                 textTransform: 'uppercase',
                 fontWeight: 500,
@@ -461,8 +462,8 @@ export default function VisionGoalRenew() {
         <motion.div {...reveal(2)}>
           <Typography
             sx={{
-              fontSize: { xs: 12, md: 13 },
-              letterSpacing: '0.28em',
+              fontSize: { xs: 12.5, md: 14 },
+              letterSpacing: '0.3em',
               textTransform: 'uppercase',
               fontWeight: 500,
               color: navy(0.78),
@@ -479,8 +480,8 @@ export default function VisionGoalRenew() {
             sx={{
               m: 0,
               fontWeight: 300,
-              fontSize: 'clamp(1.95rem, 5.2vw, 3.5rem)',
-              lineHeight: 1.12,
+              fontSize: 'clamp(2.05rem, min(5.6vw, 7.6vh), 3.9rem)',
+              lineHeight: 1.14,
               letterSpacing: '-0.01em',
               color: NAVY,
             }}
@@ -499,10 +500,10 @@ export default function VisionGoalRenew() {
         <motion.div {...reveal(4)}>
           <Typography
             sx={{
-              maxWidth: 540,
+              maxWidth: 580,
               mx: 'auto',
-              fontSize: 'clamp(0.95rem, 1.4vw, 1.0625rem)',
-              lineHeight: 1.7,
+              fontSize: 'clamp(1rem, min(1.55vw, 2.3vh), 1.18rem)',
+              lineHeight: 1.78,
               fontWeight: 400,
               color: navy(0.85),
             }}
@@ -512,7 +513,7 @@ export default function VisionGoalRenew() {
         </motion.div>
 
         {/* Signature — ascending progress bar (no outbound link) */}
-        <motion.div {...reveal(5)} style={{ width: '100%', maxWidth: 520 }}>
+        <motion.div {...reveal(5)} style={{ width: '100%', maxWidth: 544 }}>
           <Box
             sx={{
               display: 'flex',
@@ -615,13 +616,13 @@ export default function VisionGoalRenew() {
               href={`mailto:${CONTACT_EMAIL}`}
               endIcon={<ArrowOutwardIcon sx={{ transition: 'transform .25s ease' }} />}
               sx={{
-                px: 5,
-                py: 1.4,
+                px: 5.5,
+                py: 1.55,
                 borderRadius: 999,
                 textTransform: 'none',
                 fontFamily: FONT,
                 fontWeight: 500,
-                fontSize: 15,
+                fontSize: 15.5,
                 letterSpacing: '0.02em',
                 color: '#ffffff',
                 background: NAVY,
