@@ -1,9 +1,12 @@
 import '../globals.css'
-import Navbar from '../../components/Navbar'
+// SITE PAUSED — the site chrome (navbar, cookie banner, scroll-to-top) is
+// hidden while the renewed Vision Goal platform is in progress. Uncomment the
+// imports + JSX below to bring the full site back.
+// import Navbar from '../../components/Navbar'
 import ThemeProviderWrapper from '../../components/ThemeProvider'
 import { getMessages } from 'next-intl/server'
 import { NextIntlClientProvider } from 'next-intl'
-import CookiesAndScroll from '../../components/Cookies'
+// import CookiesAndScroll from '../../components/Cookies'
 
 export default async function RootLayout(props) {
   const params = await props.params
@@ -19,8 +22,8 @@ export default async function RootLayout(props) {
       <body>
         <ThemeProviderWrapper>
           <NextIntlClientProvider messages={messages}>
-            <CookiesAndScroll />
-            <Navbar />
+            {/* <CookiesAndScroll /> */}
+            {/* <Navbar /> */}
             {children}
           </NextIntlClientProvider>
         </ThemeProviderWrapper>

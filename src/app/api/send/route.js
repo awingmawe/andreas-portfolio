@@ -2,11 +2,19 @@
 import { NextResponse } from 'next/server'
 import { Resend } from 'resend'
 
-// Initialize Resend with your API key
-const resend = new Resend(process.env.NEXT_PUBLIC_RESEND_API_KEY)
-
 export async function POST(request) {
   try {
+    // Initialize Resend lazily so a missing API key can't break the build
+    // (the contact form is currently hidden while the site is paused).
+    const apiKey = process.env.NEXT_PUBLIC_RESEND_API_KEY
+    if (!apiKey) {
+      return NextResponse.json(
+        { error: 'Email service is not configured' },
+        { status: 503 },
+      )
+    }
+    const resend = new Resend(apiKey)
+
     // Parse the request body
     const { name, email, subject, message } = await request.json()
 
