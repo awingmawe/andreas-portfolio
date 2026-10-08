@@ -31,6 +31,13 @@ const nextConfig = {
       // while no programme is confirmed. Send the traffic to the contact form
       // instead of returning a 404.
       { source: "/request-dossier", destination: "/contact", permanent: false },
+      // The previous site on this domain (the andreas-portfolio repo) used
+      // next-intl with a locale prefix: its only pages were /en and /de, and
+      // its sitemap listed both. Bookmarks, search results and browser
+      // autocomplete still point there, so send them — permanently — to the
+      // same page without the prefix (/en -> /, /de/about -> /about).
+      { source: "/:locale(en|de)", destination: "/", permanent: true },
+      { source: "/:locale(en|de)/:path*", destination: "/:path*", permanent: true },
     ];
   },
 };
