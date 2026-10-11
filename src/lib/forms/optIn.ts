@@ -75,6 +75,13 @@ export function verifyOptInToken(token: string | null | undefined): OptInResult 
 export function siteUrl(): string {
   const configured = process.env.NEXT_PUBLIC_SITE_URL || process.env.SITE_URL;
   if (configured) return configured.replace(/\/$/, "");
+  // On a production deploy, use the project's real domain (Vercel provides
+  // it) rather than VERCEL_URL, which is the one-off deployment address and
+  // can sit behind Vercel's deployment protection — confirmation links built
+  // from it would not open for subscribers.
+  if (process.env.VERCEL_ENV === "production" && process.env.VERCEL_PROJECT_PRODUCTION_URL) {
+    return `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`;
+  }
   if (process.env.VERCEL_URL) return `https://${process.env.VERCEL_URL}`;
   return "https://visiongoal.ch";
 }
