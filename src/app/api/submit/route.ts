@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { submissionSchema } from "@/lib/forms/schemas";
 import { checkRateLimit, clientIpFrom } from "@/lib/forms/rateLimit";
-import { deliverSubmission } from "@/lib/forms/mailer";
+import { deliverSubmission, failureCode } from "@/lib/forms/mailer";
 import { verifyTurnstile } from "@/lib/forms/turnstile";
 
 export const runtime = "nodejs";
@@ -13,8 +13,13 @@ const MAX_BODY_BYTES = 32 * 1024;
 // filled by a script rather than a person.
 const MIN_ELAPSED_MS = 2500;
 
-function fail(status: number, error: string, fieldErrors?: Record<string, string[]>) {
-  return NextResponse.json({ ok: false, error, fieldErrors }, { status });
+function fail(
+  status: number,
+  error: string,
+  fieldErrors?: Record<string, string[]>,
+  code?: string,
+) {
+  return NextResponse.json({ ok: false, error, fieldErrors, code }, { status });
 }
 
 export async function POST(request: Request) {
@@ -80,6 +85,8 @@ export async function POST(request: Request) {
     return fail(
       503,
       "We could not deliver your message just now. Please email office@visiongoal.ch and we will pick it up from there.",
+      undefined,
+      failureCode(result.reason),
     );
   }
 

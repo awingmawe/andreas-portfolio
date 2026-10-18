@@ -236,6 +236,22 @@ function acknowledgementHtml(kind: FormKind, action?: { href: string; label: str
 export type DeliveryResult = { delivered: boolean; reason?: string };
 
 /**
+ * A coarse, non-identifying category for a failed delivery, safe to return to
+ * the browser so a failure can be diagnosed without access to the server logs.
+ * Resend's own message is never exposed: it can contain the account's email.
+ */
+export function failureCode(reason: string | undefined): string {
+  const r = reason ?? "";
+  if (/no resend api key|RESEND_API_KEY is not configured/i.test(r)) return "not_configured";
+  if (/OPTIN_SECRET/i.test(r)) return "optin_not_configured";
+  if (/api key is invalid|invalid api key|restricted/i.test(r)) return "key_rejected";
+  if (/only send testing emails to your own email/i.test(r)) return "sender_restricted";
+  if (/not verified/i.test(r)) return "domain_unverified";
+  if (/quota|rate limit|too many/i.test(r)) return "quota";
+  return "send_failed";
+}
+
+/**
  * Step one of the dispatch double opt-in: email the subscriber a confirmation
  * link and tell nobody else. The address is not on the list, and the Vision Goal
  * inbox is not notified, until the link is followed.
