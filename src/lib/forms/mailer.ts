@@ -1,3 +1,4 @@
+import "server-only";
 import { Resend } from "resend";
 import { organisation } from "@/lib/organisation";
 import { formKindLabels, type FormKind, type Submission } from "./schemas";
@@ -20,12 +21,59 @@ function destinationFor(kind: FormKind): string {
 
 const FROM = process.env.MAIL_FROM || `Vision Goal <no-reply@visiongoal.ch>`;
 
+// Resend's shared sender, which the previous visiongoal.ch site used. It needs
+// no domain verification, but Resend only delivers it to the email address of
+// the Resend account that owns the API key. Used automatically when Resend
+// refuses FROM because visiongoal.ch is not verified in that account, so the
+// enquiry notification can still reach the inbox until the domain is set up.
+const FALLBACK_FROM = "Vision Goal <onboarding@resend.dev>";
+
+// The previous site (deployed to the same Vercel project) stored its key as
+// NEXT_PUBLIC_RESEND_API_KEY, so that name is accepted too. It is looked up
+// by a computed name so it is read from the server's environment at request
+// time: `next build` replaces any literal process.env.NEXT_PUBLIC_* reference
+// with the build-time value — in the CI build that can be an empty or
+// "[SENSITIVE]" placeholder rather than the key (and it would put the key in
+// the build output).
+const LEGACY_KEY_NAME = ["NEXT", "PUBLIC", "RESEND", "API", "KEY"].join("_");
+function apiKey(): string | undefined {
+  return process.env.RESEND_API_KEY || process.env[LEGACY_KEY_NAME] || undefined;
+}
+
 let client: Resend | null = null;
+let clientKey: string | undefined;
 function resend(): Resend | null {
-  const key = process.env.RESEND_API_KEY;
+  const key = apiKey();
   if (!key) return null;
-  if (!client) client = new Resend(key);
+  if (!client || clientKey !== key) {
+    client = new Resend(key);
+    clientKey = key;
+  }
   return client;
+}
+
+type MailOptions = { to: string; subject: string; html: string; replyTo?: string };
+type SendOutcome = { error: { message: string } | null; usedFallback: boolean };
+
+function domainNotVerified(error: { message?: string } | null): boolean {
+  return Boolean(error && /not verified/i.test(error.message ?? ""));
+}
+
+/**
+ * Send from FROM; if Resend rejects it because the sending domain is not
+ * verified (nothing was sent), retry once from FALLBACK_FROM. Any other error
+ * is returned as is.
+ */
+async function send(mailer: Resend, options: MailOptions): Promise<SendOutcome> {
+  const first = await mailer.emails.send({ from: FROM, ...options });
+  if (!domainNotVerified(first.error) || FROM === FALLBACK_FROM) {
+    return { error: first.error, usedFallback: false };
+  }
+  console.warn("[mailer] sending domain not verified; retrying from the shared Resend sender", {
+    reason: first.error?.message,
+  });
+  const retry = await mailer.emails.send({ from: FALLBACK_FROM, ...options });
+  return { error: retry.error, usedFallback: true };
 }
 
 const escape = (value: string) =>
@@ -199,8 +247,7 @@ export async function sendOptInRequest(email: string): Promise<DeliveryResult> {
   const token = createOptInToken(email);
   if (!token) return { delivered: false, reason: "OPTIN_SECRET is not configured." };
 
-  const result = await mailer.emails.send({
-    from: FROM,
+  const result = await send(mailer, {
     to: email,
     subject: ACKNOWLEDGEMENTS.newsletter.subject,
     html: acknowledgementHtml("newsletter", {
@@ -225,8 +272,7 @@ export async function recordConfirmedSubscription(
   const mailer = resend();
   if (!mailer) return { delivered: false, reason: "RESEND_API_KEY is not configured." };
 
-  const result = await mailer.emails.send({
-    from: FROM,
+  const result = await send(mailer, {
     to: destinationFor("newsletter"),
     subject: `[Dispatch subscription confirmed] ${email}`,
     html: `<!doctype html><html><body style="margin:0;background:#F6F3EC;padding:32px;">
@@ -267,11 +313,10 @@ export async function deliverSubmission(
     // Without an API key the route still validates and records the submission,
     // but nothing can be sent. Surfaced as a 503 so the visitor is told to use
     // the direct email address rather than shown a false success screen.
-    return { delivered: false, reason: "RESEND_API_KEY is not configured." };
+    return { delivered: false, reason: "No Resend API key is configured (RESEND_API_KEY or NEXT_PUBLIC_RESEND_API_KEY)." };
   }
 
-  const notification = await mailer.emails.send({
-    from: FROM,
+  const notification = await send(mailer, {
     to,
     replyTo: submission.email,
     // The dispatch is handled above, and every other form asks for a name.
@@ -284,10 +329,11 @@ export async function deliverSubmission(
   }
 
   // The acknowledgement is best-effort: if it fails, the enquiry has still been
-  // received and the visitor should not be told otherwise.
+  // received and the visitor should not be told otherwise. It is skipped while
+  // on the shared sender, which cannot deliver to visitors' addresses.
+  if (notification.usedFallback) return { delivered: true };
   try {
-    await mailer.emails.send({
-      from: FROM,
+    await send(mailer, {
       to: submission.email,
       subject: ACKNOWLEDGEMENTS[submission.kind].subject,
       html: acknowledgementHtml(submission.kind),
